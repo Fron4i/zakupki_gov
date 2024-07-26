@@ -11,7 +11,11 @@ function setZoom() {
 		const zoomHeight = currentHeight / baseHeight
 
 		// Выбираем минимальное значение для сохранения пропорций
-		const zoom = Math.min(zoomWidth, zoomHeight)
+		let zoom = Math.min(zoomWidth, zoomHeight)
+
+		if (zoom < 0.78) {
+			zoom += (30 / 100) * zoom
+		}
 
 		document.body.style.zoom = zoom
 	}
