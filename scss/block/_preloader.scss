@@ -1,0 +1,28 @@
+#loadingElement {
+	/* Ваш стиль для элемента, который двигает страницу во время загрузки */
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+	background-color: #fff;
+}
+
+.preloader-tablet {
+	transform: translate(-50%, -50%) rotate(90deg) !important;
+	height: 300%;
+	width: 300%;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999999;
+	display: none;
+	& .preloader {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) rotate(90deg);
+		width: 50px;
+	}
+}

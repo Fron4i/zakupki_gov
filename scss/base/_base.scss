@@ -1,0 +1,94 @@
+html {
+	overflow-x: hidden !important;
+}
+body {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1.5em;
+	color: $paragraph;
+	font-family: $font-main;
+	background-color: $white;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 15px;
+	max-width: 1200px;
+}
+
+.none {
+	display: none !important;
+}
+
+a {
+	color: $midnight-blue;
+	transition: color 0.2s ease-in;
+
+	&:hover {
+		color: $primary;
+	}
+}
+.small-text {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 20px;
+	&.nav-item {
+		color: $gray;
+	}
+	&.w--current {
+		color: $midnight-blue;
+	}
+}
+
+::-webkit-scrollbar {
+	width: 7px; /* Измените значение здесь на желаемую ширину */
+}
+
+/* Добавьте следующую строку, если вы хотите изменить цвет фона скролл бара */
+::-webkit-scrollbar-track {
+	background-color: #f1f1f1; /* Замените на желаемый цвет фона */
+}
+
+/* Добавьте следующую строку, если вы хотите изменить цвет полосы прокрутки */
+::-webkit-scrollbar-thumb {
+	background-color: #888; /* Замените на желаемый цвет полосы прокрутки */
+	border-radius: 30px;
+}
+
+//TODO UI KIT
+
+//.small-title {
+//	color: $primary;
+//	font-family: $font-footer;
+//	text-transform: capitalize;
+//	font-size: 20px;
+//	line-height: 30px;
+//	//font-size: min(55px / 2.5, calc((1.7vw + 1.7vh + 0.8vmin) / 2.5));
+//	//line-height: min(57px / 1.7, calc((1.8vw + 1.8vh + 0.7vmin) / 1.7));
+//}
+
+//.big-title {
+//	color: $midnight-blue;
+//	font-family: $font-footer;
+//	font-size: 80px;
+//	line-height: 88px; /* 110% */
+//	//font-size: min(55px / 0.625, calc((1.7vw + 1.7vh + 0.8vmin) / 0.625));
+//	//line-height: min(57px / 0.568, calc((1.8vw + 1.8vh + 0.7vmin) / 0.568));
+//}
+
+//.description-title {
+//	height: 50%;
+//	width: 40.5%;
+//	color: $main-gray;
+//	font-family: $font-footer;
+//	font-size: 16px;
+//	line-height: 24px; /* 150% */
+//	//font-size: min(55px / 3.125, calc((1.7vw + 1.7vh + 0.8vmin) / 3.125));
+//	//line-height: min(57px / 2.08, calc((1.8vw + 1.8vh + 0.7vmin) / 2.08));
+//}
+
+%card {
+	color: $main-gray;
+	font-family: $font-main;
+	transition: all 0.35s ease;
+}

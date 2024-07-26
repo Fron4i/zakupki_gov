@@ -1,0 +1,139 @@
+@mixin margin($px1, $px2, $px3, $px4) {
+	$marginValue1: 0;
+	$marginValue2: 0;
+	$marginValue3: 0;
+	$marginValue4: 0;
+
+	// Проверяем, не равно ли $px1 нулю
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	@if $px2 != 0 {
+		$marginValue2: min((55px / (50 / $px2)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px2)));
+	} @else {
+		$marginValue2: 0;
+	}
+
+	@if $px3 != 0 {
+		$marginValue3: min((55px / (50 / $px3)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px3)));
+	} @else {
+		$marginValue3: 0;
+	}
+
+	@if $px4 != 0 {
+		$marginValue4: min((55px / (50 / $px4)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px4)));
+	} @else {
+		$marginValue4: 0;
+	}
+
+	margin: $marginValue1 $marginValue2 $marginValue3 $marginValue4;
+}
+
+@mixin padding($px1, $px2, $px3, $px4) {
+	$marginValue1: 0;
+	$marginValue2: 0;
+	$marginValue3: 0;
+	$marginValue4: 0;
+
+	// Проверяем, не равно ли $px1 нулю
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	@if $px2 != 0 {
+		$marginValue2: min((55px / (50 / $px2)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px2)));
+	} @else {
+		$marginValue2: 0;
+	}
+
+	@if $px3 != 0 {
+		$marginValue3: min((55px / (50 / $px3)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px3)));
+	} @else {
+		$marginValue3: 0;
+	}
+
+	@if $px4 != 0 {
+		$marginValue4: min((55px / (50 / $px4)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px4)));
+	} @else {
+		$marginValue4: 0;
+	}
+
+	padding: $marginValue1 $marginValue2 $marginValue3 $marginValue4;
+}
+
+@mixin border($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	border-radius: $marginValue1;
+}
+
+@mixin font-size($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	font-size: $marginValue1;
+}
+
+@mixin line-height($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	line-height: $marginValue1;
+}
+
+@mixin gap($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	gap: $marginValue1;
+}
+
+@mixin width($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	width: $marginValue1;
+}
+
+@mixin height($px1) {
+	$marginValue1: 0;
+
+	@if $px1 != 0 {
+		$marginValue1: min((55px / (50 / $px1)), calc((1.7vw + 1.7vh + 0.8vmin) / (50 / $px1)));
+	} @else {
+		$marginValue1: 0;
+	}
+
+	height: $marginValue1;
+}
