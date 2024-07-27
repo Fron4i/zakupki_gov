@@ -13,7 +13,7 @@ function setZoom() {
 		// Выбираем минимальное значение для сохранения пропорций
 		let zoom = Math.min(zoomWidth, zoomHeight)
 
-		if (zoom < 0.78) {
+		if (zoom < 0.7) {
 			zoom += (30 / 100) * zoom
 		}
 

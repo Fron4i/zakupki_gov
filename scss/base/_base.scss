@@ -5,7 +5,7 @@ body {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 1.5em;
-	color: $paragraph;
+	color: $midnight-blue;
 	font-family: $font-main;
 	background-color: $white;
 }
@@ -29,7 +29,7 @@ a {
 	}
 }
 .small-text {
-	font-size: 13px;
+	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
 	&.nav-item {
@@ -57,38 +57,84 @@ a {
 
 //TODO UI KIT
 
-//.small-title {
-//	color: $primary;
-//	font-family: $font-footer;
-//	text-transform: capitalize;
-//	font-size: 20px;
-//	line-height: 30px;
-//	//font-size: min(55px / 2.5, calc((1.7vw + 1.7vh + 0.8vmin) / 2.5));
-//	//line-height: min(57px / 1.7, calc((1.8vw + 1.8vh + 0.7vmin) / 1.7));
-//}
-
-//.big-title {
-//	color: $midnight-blue;
-//	font-family: $font-footer;
-//	font-size: 80px;
-//	line-height: 88px; /* 110% */
-//	//font-size: min(55px / 0.625, calc((1.7vw + 1.7vh + 0.8vmin) / 0.625));
-//	//line-height: min(57px / 0.568, calc((1.8vw + 1.8vh + 0.7vmin) / 0.568));
-//}
-
-//.description-title {
-//	height: 50%;
-//	width: 40.5%;
-//	color: $main-gray;
-//	font-family: $font-footer;
-//	font-size: 16px;
-//	line-height: 24px; /* 150% */
-//	//font-size: min(55px / 3.125, calc((1.7vw + 1.7vh + 0.8vmin) / 3.125));
-//	//line-height: min(57px / 2.08, calc((1.8vw + 1.8vh + 0.7vmin) / 2.08));
-//}
-
 %card {
 	color: $main-gray;
 	font-family: $font-main;
 	transition: all 0.35s ease;
+}
+
+.ocean {
+	color: $ocean;
+}
+.dark-ocean {
+	color: $dark-ocean;
+}
+.motley {
+	background: linear-gradient(
+		270deg,
+		#ff5d4d -6.99%,
+		#ec489a 8.89%,
+		#a042d9 27.03%,
+		#8241ef 47.45%,
+		rgba(66, 102, 248, 0.99) 65.59%
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+.h1 {
+	font-size: 75px;
+	font-weight: 800;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+.h2 {
+	font-size: 45px;
+	font-weight: 600;
+	line-height: normal;
+}
+.h2-1 {
+	font-size: 45px;
+	line-height: normal;
+}
+
+.h3 {
+	font-size: 27px;
+	line-height: 38.4px;
+}
+.h4 {
+	font-size: 20px;
+	line-height: 26px;
+}
+.h5 {
+	font-size: 18px;
+	line-height: 24px;
+}
+.h5-5 {
+	font-size: 15px;
+	line-height: 19.2px;
+}
+
+.text {
+	font-size: 13px;
+	line-height: 20px;
+}
+
+.text-m {
+	font-size: 15px;
+	line-height: 19.2px;
+}
+
+.text-q {
+	font-size: 22px;
+	line-height: 31.2px;
+	letter-spacing: 0.72px;
+}
+
+.text-light {
+	font-size: 13px;
+	line-height: 20px;
+	font-weight: 300;
 }

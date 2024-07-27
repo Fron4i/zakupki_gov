@@ -33,7 +33,19 @@
 .header__logo {
 	width: 120px;
 	height: 100%;
+	&-main {
+		width: 96px;
+		height: 36px;
+		display: flex;
+	}
+	&-wrapper {
+		display: flex;
+		gap: 20px;
+		justify-content: center;
+		align-items: center;
+	}
 }
+
 .header__wrapper-nav {
 	display: flex;
 	justify-content: space-between;
@@ -47,15 +59,17 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 40px;
+	gap: 25px;
 }
 .header__button {
+	transition: all 0.3s ease;
 	display: flex;
 	justify-content: space-between;
 	padding: 16px 40px;
 	border-radius: 130px;
 	background-color: $white;
 	box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
+	border: 1px solid $white;
 }
 .header__chat {
 	path {

@@ -281,6 +281,12 @@
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
+
+	.header__button:hover {
+		box-shadow: none;
+		color: $gray;
+		border: 1px solid $gray;
+	}
 }
 
 @media (hover: none) {

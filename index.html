@@ -22,27 +22,25 @@
 			<header class="header">
 				<div class="container">
 					<div class="header__wrapper">
-						<a href="#4" target="_blank">
-							<img class="header__logo" src="./img/main_Img/logo.svg" alt="logo" />
-						</a>
+						<div class="header__logo-wrapper">
+							<a href="#4" target="_blank">
+								<img class="header__logo" src="./img/welcome_Img/tendr-logo.svg" alt="tendr-logo" />
+							</a>
+							<img src="./img/welcome_Img/delimiter.svg" alt="delimiter" />
+							<a href="#5" target="_blank" class="header__logo-main">
+								<img width="96" height="36" src="./img/welcome_Img/tendr-logo-main.svg" alt="main-logo" />
+							</a>
+						</div>
 						<div class="header__wrapper-nav">
 							<a href="#" class="nav-item small-text">Главная</a>
-							<a href="#" class="nav-item small-text w--current">Услуги</a>
-							<a href="#" class="nav-item small-text">Кейсы</a>
-							<a href="#" class="nav-item small-text">База знаний</a>
-							<a href="#" class="nav-item small-text">Контакты</a>
+							<a href="#" class="nav-item small-text w--current">Возможности</a>
+							<a href="#" class="nav-item small-text">Стоимость</a>
+							<a href="#" class="nav-item small-text">Вопросы</a>
 						</div>
 
 						<div class="header__wrapper-button">
+							<a href="#" class="header__button small-text w--current">Вход</a>
 							<a href="#" class="header__button small-text w--current">Заказать</a>
-							<a href="#">
-								<svg class="header__chat" width="23" height="21" viewBox="0 0 23 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path
-										d="M4.37178 20.7008C5.71323 20.7008 8.42509 19.398 10.4614 17.9503C17.2651 18.0758 22.3511 14.1383 22.3511 8.98484C22.3511 4.00506 17.3809 0 11.1755 0C4.97013 0 0 4.00506 0 8.98484C0 12.1503 1.9784 14.9876 4.99908 16.4545C4.5841 17.2458 3.84099 18.3267 3.42601 18.8768C2.81801 19.6875 3.23299 20.7008 4.37178 20.7008ZM5.52022 18.7417C5.41406 18.79 5.36581 18.7224 5.44301 18.6259C5.9352 18.0083 6.66866 17.0528 7.02573 16.3869C7.31526 15.8561 7.2091 15.3929 6.59145 15.1034C3.64798 13.7137 1.9398 11.5133 1.9398 8.98484C1.9398 5.09559 6.03171 1.93015 11.1755 1.93015C16.3194 1.93015 20.4113 5.09559 20.4113 8.98484C20.4113 12.8741 16.3194 16.0395 11.1755 16.0395C10.9922 16.0395 10.7316 16.0299 10.3842 16.0202C9.96923 16.0202 9.66038 16.1457 9.27435 16.4448C8.11627 17.3037 6.38878 18.3943 5.52022 18.7417Z"
-										fill="#949494"
-									/>
-								</svg>
-							</a>
 						</div>
 
 						<div class="menu-button">
@@ -171,14 +169,45 @@
 					</div>
 				</div>
 
+				<!-- ! КОНТЕНТ -->
+
 				<div class="welcome container">
-					<div class="welcome__wrapper">
-						<h2 class="small-title" data-aos="fade-right" data-aos-delay="10">Услуги</h2>
-						<h1 class="big-title" data-aos="fade-right" data-aos-delay="200">Наши услуги</h1>
+					<img src="./img/welcome_Img/left-crystal.svg" alt="left-crystal" class="crystal-left crystal" />
+					<img src="./img/welcome_Img/right-crystal.svg" alt="right-crystal" class="crystal-right crystal" />
+					<h1 class="h1 welcome__limiter-title">Интеграция <span class="ocean">Битрикс</span><span class="dark-ocean">24</span> и zakupki.gov.ru</h1>
+					<h3 class="h3 welcome__limiter-text">
+						Приложение “Тендер” для <span class="ocean">Битрикс</span><span class="dark-ocean">24</span> позволяет автоматически импортировать извещения о
+						государственных закупках с сайта <span class="ocean">zakupki.gov.ru</span> прямо в вашу CRM систему.
+					</h3>
+					<a href="#" class="button button--ocean text">Получить доступ</a>
+					<img height="44" src="./img/welcome_Img/grade.png" alt="grade" class="grade" />
+				</div>
+
+				<div class="svg-move">
+					<img src="./img/welcome_Img/svgMove-main-bg.svg" alt="main-bg-svgMove" class="svg-move__main-bg" />
+					<img src="./img/welcome_Img/svgMove-left-lid.svg" alt="left-lid-svgMove" class="svg-move__left-lid svg-move__component-shadow" />
+					<img src="./img/welcome_Img/svgMove-right-lid.svg" alt="right-lid-svgMove" class="svg-move__right-lid svg-move__component-shadow" />
+					<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-1-lid svg-move__component-shadow" />
+					<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-2-lid svg-move__component-shadow" />
+					<div class="svg-move__benefit-wrapper">
+						<div class="svg-move__info-wrapper">
+							<div class="svg-move__title"><span class="motley">Ежедневный</span>импорт</div>
+							<div class="svg-move__text">
+								Автоматически получает извещения в виде лидов, включая всю информацию о закупке, организаторе, лотах, цене контракта, дате подачи и многом
+								другом.
+							</div>
+						</div>
+						<div class="svg-move__info-wrapper">
+							<div class="svg-move__title"><span class="motley">Импорт</span>компаний</div>
+							<div class="svg-move__text">При импорте лида создается новая компания в CRM или привязывается уже существующая</div>
+						</div>
+						<div class="svg-move__info-wrapper">
+							<div class="svg-move__title"><span class="motley">Настройка</span>фильтров</div>
+							<div class="svg-move__text">
+								Получайте только нужные торги, используя фильтрацию по ключевым словам, этапу закупки, ОКПД, начальной цене, региону, 44 ФЗ и 223 ФЗ.
+							</div>
+						</div>
 					</div>
-					<p class="description-title" data-aos="fade-left" data-aos-delay="200">
-						Мы подберем оптимальные инструменты для развития вашего бизнеса и обеспечим их эффективную интеграцию и внедрение.
-					</p>
 				</div>
 
 				<!-- ! КОНТЕНТ -->
