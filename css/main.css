@@ -291,6 +291,10 @@ a:hover {
   text-fill-color: transparent;
 }
 
+.letter-spacing-1 {
+  letter-spacing: 1px;
+}
+
 .h1 {
   font-size: 75px;
   font-weight: 800;
@@ -304,13 +308,13 @@ a:hover {
   line-height: normal;
 }
 
-.h2-1 {
+.h2-l {
   font-size: 45px;
   line-height: normal;
 }
 
 .h3 {
-  font-size: 27px;
+  font-size: 29px;
   line-height: 38.4px;
 }
 
@@ -330,7 +334,7 @@ a:hover {
 }
 
 .text {
-  font-size: 13px;
+  font-size: 15px;
   line-height: 20px;
 }
 
@@ -365,6 +369,7 @@ a:hover {
   display: flex;
 }
 .button.text {
+  text-transform: none;
   font-size: 13px;
   line-height: 20px;
 }
@@ -631,37 +636,77 @@ a:hover {
   height: 844px;
 }
 .svg-move__main-bg {
+  width: 1100px;
+  height: 514px;
   position: absolute;
-  transform: translate(calc(50% - 113px), -7.5%);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -7.5%);
 }
 .svg-move__component-shadow {
   border-radius: 18px;
   box-shadow: 1px 1px 40px 0px rgba(0, 0, 0, 0.25);
 }
 .svg-move__left-lid {
-  top: -156px;
-  left: 450px;
+  top: -19.5%;
+  left: 28.1%;
+  transform: translate(-50%, -7.5%);
   position: absolute;
 }
 .svg-move__right-lid {
-  top: -155px;
-  right: 467px;
+  top: -22.8%;
+  right: 22.6%;
   position: absolute;
 }
 .svg-move__bottom-1-lid {
-  top: 225px;
-  right: -45px;
+  top: 17.2%;
+  right: 21.7%;
   position: absolute;
 }
 .svg-move__bottom-2-lid {
-  top: 353px;
-  right: 150px;
+  top: 32.3%;
+  right: 30.3%;
   position: absolute;
 }
 .svg-move__benefit-wrapper {
+  height: 225px;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
   width: 100%;
   background-color: #fff;
+  border: 3px solid #f6f6f6;
+  border-left: 0;
+  border-right: 0;
 }
+.svg-move__benefit-interior-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  max-width: 1080px;
+}
+.svg-move__info-wrapper {
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  width: 327px;
+}
+.svg-move__title {
+  text-align: center;
+}
+.svg-move__text {
+  text-align: center;
+}
+
+.main-bg-shadow {
+  filter: drop-shadow(5px 5px 50px rgba(7, 7, 7, 0.2));
+}
+
 .footer {
   min-height: 634px;
   background-color: #fafafa;

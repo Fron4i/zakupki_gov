@@ -15,6 +15,24 @@ function setZoom() {
 
 		if (zoom < 0.7) {
 			zoom += (30 / 100) * zoom
+			$(".svg-move__left-lid").css("left", "21.6%")
+			$(".svg-move__right-lid").css("right", "14.3%")
+
+			$(".svg-move__bottom-1-lid").css("right", "13.2%")
+			$(".svg-move__bottom-2-lid").css("right", "24.5%")
+		} else if (zoom > 1.17) {
+			zoom -= (15 / 100) * zoom
+			$(".svg-move__left-lid").css("left", "31.4%")
+			$(".svg-move__right-lid").css("right", "26.6%")
+
+			$(".svg-move__bottom-1-lid").css("right", "26%")
+			$(".svg-move__bottom-2-lid").css("right", "33.2%")
+		} else {
+			$(".svg-move__left-lid").css("left", "28.1%")
+			$(".svg-move__right-lid").css("right", "22.6%")
+
+			$(".svg-move__bottom-1-lid").css("right", "21.7%")
+			$(".svg-move__bottom-2-lid").css("right", "30.3%")
 		}
 
 		document.body.style.zoom = zoom

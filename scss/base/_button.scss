@@ -11,6 +11,7 @@
 	transition: all 0.3s;
 	display: flex;
 	&.text {
+		text-transform: none;
 		font-size: 13px;
 		line-height: 20px;
 	}
