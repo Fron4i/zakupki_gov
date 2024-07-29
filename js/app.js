@@ -14,25 +14,11 @@ function setZoom() {
 		let zoom = Math.min(zoomWidth, zoomHeight)
 
 		if (zoom < 0.7) {
-			zoom += (30 / 100) * zoom
-			$(".svg-move__left-lid").css("left", "21.6%")
-			$(".svg-move__right-lid").css("right", "14.3%")
-
-			$(".svg-move__bottom-1-lid").css("right", "13.2%")
-			$(".svg-move__bottom-2-lid").css("right", "24.5%")
+			zoom += (20 / 100) * zoom
 		} else if (zoom > 1.17) {
 			zoom -= (15 / 100) * zoom
-			$(".svg-move__left-lid").css("left", "31.4%")
-			$(".svg-move__right-lid").css("right", "26.6%")
-
-			$(".svg-move__bottom-1-lid").css("right", "26%")
-			$(".svg-move__bottom-2-lid").css("right", "33.2%")
 		} else {
-			$(".svg-move__left-lid").css("left", "28.1%")
-			$(".svg-move__right-lid").css("right", "22.6%")
-
-			$(".svg-move__bottom-1-lid").css("right", "21.7%")
-			$(".svg-move__bottom-2-lid").css("right", "30.3%")
+			zoom -= (5 / 100) * zoom
 		}
 
 		document.body.style.zoom = zoom
@@ -51,6 +37,70 @@ setZoom()
 
 // Обновляем zoom при изменении размера окна
 window.addEventListener("resize", setZoom)
+
+// ~hover popup
+
+// Получаем все элементы с классом "signboards__popup-triger"
+const popupTriggers = document.querySelectorAll(".signboards__popup-triger")
+
+popupTriggers.forEach((trigger) => {
+	trigger.addEventListener("mouseenter", () => {
+		const hoverPopup = trigger.closest(".signboards").querySelector(".hover-popup.svg-move__component-shadow.svg-move__component-shadow--2")
+
+		// Устанавливаем свойства для найденного элемента
+		if (hoverPopup) {
+			hoverPopup.style.opacity = "1"
+			hoverPopup.style.pointerEvents = "all"
+
+			// Добавляем обработчик события "mouseenter" на найденный элемент
+			hoverPopup.addEventListener("mouseenter", () => {
+				hoverPopup.style.opacity = "1"
+				hoverPopup.style.pointerEvents = "all"
+			})
+
+			// Добавляем обработчик события "mouseleave" на найденный элемент
+			hoverPopup.addEventListener("mouseleave", () => {
+				hoverPopup.style.opacity = ""
+				hoverPopup.style.pointerEvents = ""
+			})
+		}
+	})
+
+	// Добавляем обработчик события "mouseleave" на каждый элемент "signboards__popup-triger"
+	trigger.addEventListener("mouseleave", () => {
+		// Находим ближайший элемент с классом "hover-popup svg-move__component-shadow svg-move__component-shadow--2"
+		const hoverPopup = trigger.closest(".signboards").querySelector(".hover-popup.svg-move__component-shadow.svg-move__component-shadow--2")
+
+		// Сбрасываем свойства для найденного элемента
+		if (hoverPopup) {
+			hoverPopup.style.opacity = ""
+			hoverPopup.style.pointerEvents = ""
+		}
+	})
+})
+
+// ?ВОПРОСЫ
+
+const accordions = document.querySelectorAll(".accordion")
+
+accordions.forEach((accordion, index) => {
+	const header = accordion.querySelector(".accordion__header")
+	const content = accordion.querySelector(".accordion__content")
+	const icon = accordion.querySelector("#accordion-icon")
+
+	header.addEventListener("click", () => {
+		const isOpen = content.style.height === `${content.scrollHeight}px`
+
+		accordions.forEach((a, i) => {
+			const c = a.querySelector(".accordion__content")
+			const ic = a.querySelector("#accordion-icon")
+
+			c.style.height = i === index && !isOpen ? `${c.scrollHeight}px` : "0px"
+			ic.classList.toggle("ri-add-line", i !== index || !isOpen)
+			ic.classList.toggle("ri-subtract-fill", i === index && !isOpen)
+		})
+	})
+})
 
 //! аккордион на мобиле
 document.addEventListener("DOMContentLoaded", function () {

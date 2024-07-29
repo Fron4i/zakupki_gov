@@ -71,6 +71,11 @@
 	box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
 	border: 1px solid $white;
 }
+
+.small-text.w--current.hover-button {
+	color: $gray;
+}
+
 .header__chat {
 	path {
 		fill: #a6a6a6;

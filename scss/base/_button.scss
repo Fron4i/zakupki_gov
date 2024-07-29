@@ -81,7 +81,34 @@
 		&:hover {
 			background-color: $white;
 			border-color: $ocean;
-			color: $dark-ocean;
+			color: $ocean;
+
+			.button__link {
+				color: $ocean;
+
+				&:hover {
+					color: $ocean;
+				}
+			}
+		}
+
+		.button__link {
+			color: $white;
+		}
+	}
+	.price__button-wrapper > *:nth-child(2):hover {
+		color: $white;
+	}
+	.button--ocean-reversal {
+		border: 2px solid $white;
+		background-color: $white;
+		color: $ocean;
+		letter-spacing: 0.6px;
+
+		&:hover {
+			background-color: $ocean;
+			border-color: $ocean;
+			color: $white;
 
 			.button__link {
 				color: $dark-ocean;

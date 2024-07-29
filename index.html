@@ -20,7 +20,7 @@
 	<body>
 		<div class="wrapper">
 			<header class="header">
-				<div class="container">
+				<div class="container container--1300">
 					<div class="header__wrapper">
 						<div class="header__logo-wrapper">
 							<a href="#4" target="_blank">
@@ -39,7 +39,7 @@
 						</div>
 
 						<div class="header__wrapper-button">
-							<a href="#" class="header__button small-text w--current">Вход</a>
+							<a href="#" class="header__button small-text w--current hover-button">Вход</a>
 							<a href="#" class="header__button small-text w--current">Заказать</a>
 						</div>
 
@@ -185,10 +185,12 @@
 
 				<div class="svg-move">
 					<img src="./img/welcome_Img/svgMove-main-bg.png" alt="main-bg-svgMove" class="svg-move__main-bg main-bg-shadow" />
-					<img src="./img/welcome_Img/svgMove-left-lid.svg" alt="left-lid-svgMove" class="svg-move__left-lid svg-move__component-shadow" />
-					<img src="./img/welcome_Img/svgMove-right-lid.svg" alt="right-lid-svgMove" class="svg-move__right-lid svg-move__component-shadow" />
-					<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-1-lid svg-move__component-shadow" />
-					<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-2-lid svg-move__component-shadow" />
+					<div class="svg-move__relative-platform">
+						<img src="./img/welcome_Img/svgMove-left-lid.svg" alt="left-lid-svgMove" class="svg-move__left-lid svg-move__component-shadow" />
+						<img src="./img/welcome_Img/svgMove-right-lid.svg" alt="right-lid-svgMove" class="svg-move__right-lid svg-move__component-shadow" />
+						<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-1-lid svg-move__component-shadow" />
+						<img src="./img/welcome_Img/svgMove-bottom-lid.svg" alt="bottom-lid-svgMove" class="svg-move__bottom-2-lid svg-move__component-shadow" />
+					</div>
 					<div class="svg-move__benefit-wrapper">
 						<div class="svg-move__benefit-interior-wrapper">
 							<div class="svg-move__info-wrapper">
@@ -212,16 +214,410 @@
 					</div>
 				</div>
 
-				<div class="problems container">
+				<div class="problems container container--1330">
 					<h2 class="h2-l problems__title">Узнаёте ваши проблемы?</h2>
 					<div class="problems__wrapper">
 						<div class="problems__item-wrapper">
-							<img src="XXXX" alt="problems image 1" class="problems__image" />
-							<div class="problems__item-title">XXXX</div>
-							<div class="problems__points-wrapper">
-								<div class="points__wrapper">
-									<img src="XXXX" alt="image check" class="points__image-check" />
-									<div class="points__info">XXXX</div>
+							<img src="./img/core_Img/Rectangle 23-2.png" alt="problems image 1" class="problems__image" />
+							<div class="problems__info-wrapper">
+								<div class="h3 problems__item-title"><span class="red">Отсутствие CRM</span> системы в компании</div>
+								<div class="problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы работаете по стандартам 20го века</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Отдел продаж без CRM - это как бухгалтерия без 1С!</div>
+									</div>
+								</div>
+								<a href="#" class="header__button small-text w--current">Подробнее</a>
+							</div>
+						</div>
+						<div class="problems__item-wrapper">
+							<img src="./img/core_Img/Rectangle 23.png" alt="problems image 1" class="problems__image" />
+							<div class="problems__info-wrapper">
+								<div class="h3 problems__item-title"><span class="red">Ручное внесение</span> извещений из zakupki.gov.ru в CRM</div>
+								<div class="problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы используете труд интеллектуалов для выполнения примитивной работы</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы рискуете получить неверно внесенные сведения по причине ошибки человека</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Ваши менеджеры наверняка выбирают только удобные для себя извещения о торгах, умышленно игнорируя сложные или слабо влияющие
+											на KPI
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="problems__item-wrapper">
+							<img src="./img/core_Img/Rectangle 23-1.png" alt="problems image 1" class="problems__image" />
+							<div class="problems__info-wrapper">
+								<div class="h3 problems__item-title"><span class="red">Дорогое и неэффективное</span> ПО для импорта извещений</div>
+								<div class="problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Решения наших конкурентов значительно дороже</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Несмотря на использование ПО для интеграции, вы все равно вручную отслеживаете изменения на zakupki.gov.ru и рискуете
+											упустить, например, изменение даты подачи.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="offer container container--1200">
+					<div class="h2-l offer__main-title">Что предлагаем мы</div>
+					<div class="offer__wrapper">
+						<div class="offer__item-wrapper">
+							<div class="offer__svg-wrapper">
+								<img
+									src="./img/welcome_Img/svgMove-left-lid.svg"
+									alt="message image"
+									class="offer__svg-item offer__svg-item--1 svg-move__component-shadow"
+								/>
+							</div>
+							<div class="offer__info-wrapper">
+								<div class="h3 offer__title letter-spacing-1">
+									Автоматический импорт торгов в <span class="ocean">Битрикс</span><span class="dark-ocean">24</span>
+								</div>
+								<div class="h4 offer__text">
+									Ежедневный импорт извещений <span class="ocean">zakupki.gov.ru</span> обеспечивает автоматическое получение данных в виде лидов,
+									включая информацию о закупке, организаторе, лотах, цене контракта и дате подачи и многом другом.
+								</div>
+								<div class="offer__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Автоматический импорт данных</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Лидогенерация с привязанной компанией и заполненными реквизитами</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Автоматический поиск и привязка контактов по номеру телефона, email</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="offer__item-wrapper">
+							<div class="offer__svg-wrapper">
+								<img
+									src="./img/core_Img/svg-move-1.svg"
+									alt="message image"
+									class="offer__svg-item offer__svg-item--2 svg-move__component-shadow svg-move__component-shadow--2"
+								/>
+								<img
+									src="./img/core_Img/svg-move-3.svg"
+									alt="message image"
+									class="offer__svg-item offer__svg-item--4 svg-move__component-shadow svg-move__component-shadow--2"
+								/>
+								<img
+									src="./img/core_Img/svg-move-2.svg"
+									alt="message image"
+									class="offer__svg-item offer__svg-item--3 svg-move__component-shadow svg-move__component-shadow--2"
+								/>
+							</div>
+							<div class="offer__info-wrapper">
+								<div class="h3 offer__title offer__title--none letter-spacing-1">Гибкая настройка и фильтрация</div>
+								<div class="h4 offer__text">
+									Настройте приложение для получения только нужных торгов с помощью фильтров по ключевым словам, этапам закупки, ОКПД, цене, региону и
+									законодательству.
+								</div>
+								<div class="offer__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Фильтр по 44 ФЗ и 223 ФЗ</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Фильтр по ключевым словам белого и черного списка</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Фильтр по региону и по этапу закупки и сумме контракта</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="offer__item-wrapper">
+							<div class="offer__svg-wrapper offer__svg-wrapper--2">
+								<img src="./img/core_Img/svg-move-4.svg" alt="message image" class="offer__svg-item offer__svg-item--5 svg-move__component-shadow" />
+								<img src="./img/core_Img/svg-move-5.svg" alt="message image" class="offer__svg-item offer__svg-item--6 svg-move__component-shadow" />
+							</div>
+							<div class="offer__info-wrapper">
+								<div class="h3 offer__title letter-spacing-1">Обновление извещений</div>
+								<div class="h4 offer__text">
+									Чат-бот в реальном времени уведомляет об изменениях в импортированных торгах (дата подачи, протоколы, лоты и т.д.). Приложение
+									обновляет поля в CRM при изменениях на <span class="ocean">zakupki.gov.ru</span> и автоматически переводит лиды, сделки или
+									смарт-процессы на нужные стадии воронок при изменении этапа закупки.
+								</div>
+								<div class="offer__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Чат-бот оповещает нужных сотрудников о любых изменениях в импортированных торгах</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Приложение обновляет соответствующие поля CRM при изменениях на <span class="ocean">zakupki.gov.ru</span>
+										</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Приложение переводит лиды, сделки или смарт-процессы на нужные стадии воронок при изменении этапа закупки
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="banner container container--1220-old">
+					<div class="banner__info-wrapper">
+						<div class="h5 fw500">НАВЕДИТЕ ПОРЯДОК В ТЕНДЕРНЫХ ЗАКУПКАХ</div>
+						<div class="h2-h">Автоматизируйте работу отдела.</div>
+						<div class="h4">Присоединяйтесь к приложению "Тендер" и оптимизируйте работу с госзакупками уже сегодня!</div>
+						<a href="#" class="header__button small-text w--current">Получить доступ</a>
+					</div>
+				</div>
+
+				<div class="price container container--1220">
+					<div class="price__title-wrapper">
+						<div class="h2-l price__main-title">Стоимость приложения</div>
+						<div class="h3 letter-spacing-1">
+							Для клиентов, оформивших подписку до выхода приложения в <span class="ocean">Битрикс</span
+							><span class="dark-ocean">24 Маркет,</span> действует
+							<span class="fw500">пожизненная скидка 30% на тариф Расширенный и 20% на тариф Стандарт.</span>
+						</div>
+					</div>
+					<div class="price__button-wrapper">
+						<a href="#" class="button button--ocean text">Месяц</a>
+						<a href="#" class="button button--ocean-reversal small-text">Год</a>
+					</div>
+					<div class="price__signboards-wrapper">
+						<div class="signboards svg-move__component-shadow svg-move__component-shadow--2">
+							<div class="signboards__title-wrapper">
+								<div class="h3 signboards__title">Пробный</div>
+								<div class="text-m signboards__subtitle">Бесплатный пробный период 14 дней</div>
+							</div>
+							<div class="signboards__price-wrapper">
+								<div class="h3 signboards__price">0₽</div>
+								<img src="./img/core_Img/line-price.svg" class="signboards__line" />
+								<a href="#" class="header__button small-text w--current">Получить доступ</a>
+								<div class="signboards__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Регулярная выгрузка лидов на портал Битрикс24 по любым фильтрам без ограничений по количеству торгов.
+										</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Заполнение полей лида.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Создание контакта и компании с реквизитами.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check-green.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info green">Обновление импортированных торгов и оповещения от чат-бота</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="signboards svg-move__component-shadow svg-move__component-shadow--3">
+							<div class="signboards__title-wrapper">
+								<div class="h3 signboards__title">Стандарт</div>
+								<div class="text-m signboards__subtitle">Все основные функции</div>
+								<img src="./img/core_Img/beta.svg" class="signboards__beta" />
+								<div class="hover-popup svg-move__component-shadow svg-move__component-shadow--2">
+									<div class="text-light">Цена после <span class="fw400">публикации</span> на маркете.</div>
+								</div>
+							</div>
+							<div class="signboards__price-wrapper">
+								<div class="signboards__popup-triger">
+									<div class="signboards__price-sale text-strikethrough">
+										<img src="./img/core_Img/warning.svg" alt="warning" class="warning" />
+										4 700 ₽/мес.
+									</div>
+									<div class="h3 signboards__price">3 750 ₽/мес.</div>
+								</div>
+								<img src="./img/core_Img/line-price.svg" class="signboards__line" />
+								<a href="#" class="header__button small-text w--current">Получить доступ</a>
+								<div class="signboards__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Регулярная выгрузка лидов на портал Битрикс24 по любым фильтрам без ограничений по количеству торгов.
+										</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Заполнение полей лида.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Создание контакта и компании с реквизитами.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check-red.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info dark-red">Обновление импортированных торгов и оповещения от чат-бота</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="signboards svg-move__component-shadow svg-move__component-shadow--4">
+							<div class="signboards__title-wrapper">
+								<div class="h3 signboards__title">Расширенный</div>
+								<div class="text-m signboards__subtitle">Полный функционал</div>
+								<img src="./img/core_Img/beta.svg" class="signboards__beta" />
+								<div class="hover-popup svg-move__component-shadow svg-move__component-shadow--2">
+									<div class="text-light">Цена после <span class="fw400">публикации</span> на маркете.</div>
+								</div>
+							</div>
+							<div class="signboards__price-wrapper">
+								<div class="signboards__popup-triger">
+									<div class="signboards__price-sale text-strikethrough">
+										<img src="./img/core_Img/warning.svg" alt="warning" class="warning" />
+										7 000 ₽/мес.
+									</div>
+									<div class="h3 signboards__price">4 900 ₽/мес.</div>
+								</div>
+								<img src="./img/core_Img/line-price.svg" class="signboards__line" />
+								<a href="#" class="header__button small-text w--current">Получить доступ</a>
+								<div class="signboards__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Регулярная выгрузка лидов на портал Битрикс24 по любым фильтрам без ограничений по количеству торгов.
+										</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Заполнение полей лида.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Создание контакта и компании с реквизитами.</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check-green.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info green">Обновление импортированных торгов и оповещения от чат-бота</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="banner-2 container">
+					<div class="banner-2__wrapper">
+						<img src="./img/core_Img/robot.png" alt="robot" class="banner-2__robot" />
+						<div class="h5 fw500 banner-2__title">ИНДИВИДУАЛЬНАЯ РАЗРАБОТКА ФУНКЦИЙ</div>
+						<div class="h4 fw300 banner-2__subtitle">
+							Возможна индивидуальная разработка под нужды Вашей компании. Любой дополнительный функционал по индивидуальному заказу.
+						</div>
+						<a href="#" class="header__button small-text w--current">Заказать</a>
+					</div>
+				</div>
+
+				<div class="questions container">
+					<div class="questions h2-l">Часто задаваемые вопросы</div>
+					<div class="questions__wrapper">
+						<div class="accordion__wrapper">
+							<h1 class="accordion__title">Frequently Asked Questions</h1>
+
+							<!-- Accordion 1  -->
+							<div class="accordion">
+								<div class="accordion__header">
+									<h2 class="accordion__question">What is the purpose of this pen?</h2>
+									<span class="accordion__icon">
+										<i id="accordion-icon" class="ri-add-line"></i>
+									</span>
+								</div>
+								<div class="accordion__content">
+									<p class="accordion__answer">This pen is designed to provide web developers with boilerplate code for a FAQ Accordion.</p>
+								</div>
+							</div>
+
+							<!-- Accordion 2  -->
+							<div class="accordion">
+								<div class="accordion__header">
+									<h2 class="accordion__question">What is an accordion?</h2>
+									<span class="accordion__icon">
+										<i id="accordion-icon" class="ri-add-line"></i>
+									</span>
+								</div>
+								<div class="accordion__content">
+									<p class="accordion__answer">
+										An accordion is a vertically stacked list of headers that users can click on to reveal more information about a business. With an
+										accordion, when someone visits your web page, they will see a list of headers.
+									</p>
+								</div>
+							</div>
+
+							<!-- Accordion 3 -->
+							<div class="accordion">
+								<div class="accordion__header">
+									<h2 class="accordion__question">How can I customize the accordion?</h2>
+									<span class="accordion__icon">
+										<i id="accordion-icon" class="ri-add-line"></i>
+									</span>
+								</div>
+								<div class="accordion__content">
+									<p class="accordion__answer">
+										You can customize the accordion by modifying the CSS styles and changing the HTML structure as per your needs. You can also add
+										JavaScript to enhance its functionality.
+									</p>
+								</div>
+							</div>
+
+							<!-- Accordion 4 -->
+							<div class="accordion">
+								<div class="accordion__header">
+									<h2 class="accordion__question">Is this accordion responsive?</h2>
+									<span class="accordion__icon">
+										<i id="accordion-icon" class="ri-add-line"></i>
+									</span>
+								</div>
+								<div class="accordion__content">
+									<p class="accordion__answer">
+										Yes, this accordion is designed to be responsive and will adjust its layout based on the screen size to ensure a good user
+										experience on both desktop and mobile devices.
+									</p>
+								</div>
+							</div>
+
+							<!-- Accordion 5 -->
+							<div class="accordion">
+								<div class="accordion__header">
+									<h2 class="accordion__question">Can I use this accordion in my project?</h2>
+									<span class="accordion__icon">
+										<i id="accordion-icon" class="ri-add-line"></i>
+									</span>
+								</div>
+								<div class="accordion__content">
+									<p class="accordion__answer">
+										Absolutely! Feel free to use this accordion in your projects. You can modify and adapt it as needed to fit your requirements.
+									</p>
 								</div>
 							</div>
 						</div>

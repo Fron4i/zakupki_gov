@@ -14,6 +14,21 @@ body {
 	margin: 0 auto;
 	padding: 0 15px;
 	max-width: 1200px;
+	&--1200 {
+		max-width: 1230px;
+	}
+	&--1220-old {
+		max-width: 1220px;
+	}
+	&--1220 {
+		max-width: 1250px;
+	}
+	&--1300 {
+		max-width: 1330px;
+	}
+	&--1330 {
+		max-width: 1360px;
+	}
 }
 
 .none {
@@ -69,6 +84,16 @@ a {
 .dark-ocean {
 	color: $dark-ocean;
 }
+.red {
+	color: $red;
+}
+.dark-red {
+	color: $dark-red;
+}
+.green {
+	color: $green;
+}
+
 .motley {
 	background: linear-gradient(
 		270deg,
@@ -87,6 +112,21 @@ a {
 .letter-spacing-1 {
 	letter-spacing: 1px;
 }
+.fw500 {
+	font-weight: 500;
+}
+.fw400 {
+	font-weight: 400;
+}
+.fw300 {
+	font-weight: 300;
+}
+.text-strikethrough {
+	color: #919191;
+	font-size: 15px;
+	line-height: 19.2px; /* 128% */
+	text-decoration-line: line-through;
+}
 
 .h1 {
 	font-size: 75px;
@@ -102,6 +142,12 @@ a {
 .h2-l {
 	font-size: 45px;
 	line-height: normal;
+}
+
+.h2-h {
+	font-size: 32px;
+	font-weight: 500;
+	line-height: 48px;
 }
 
 .h3 {
