@@ -99,6 +99,12 @@
 	.price__button-wrapper > *:nth-child(2):hover {
 		color: $white;
 	}
+	.ocean-hover:hover {
+		color: $ocean !important;
+	}
+	.ocean-hover-2:hover {
+		color: $white !important;
+	}
 	.button--ocean-reversal {
 		border: 2px solid $white;
 		background-color: $white;

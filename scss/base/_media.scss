@@ -289,14 +289,18 @@
 		border: 1px solid $gray;
 	}
 
-	.small-text.w--current.hover-button:hover {
-		color: $midnight-blue;
+	.hover-button {
+		cursor: default;
 	}
-	.hover-button:hover {
-		background-color: $white;
-		box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
-		border: 1px solid $white;
-	}
+
+	//.small-text.w--current.hover-button:hover {
+	//	color: $midnight-blue;
+	//}
+	//.hover-button:hover {
+	//	background-color: $white;
+	//	box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
+	//	border: 1px solid $white;
+	//}
 
 	.header__logo-wrapper:hover {
 		scale: 0.95;
@@ -344,12 +348,12 @@
 		border: 1px solid $gray;
 	}
 
-	.small-text.w--current.hover-button:active {
-		color: $midnight-blue;
-	}
-	.hover-button:active {
-		background-color: $white;
-		box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
-		border: 1px solid $white;
-	}
+	//.small-text.w--current.hover-button:active {
+	//	color: $midnight-blue;
+	//}
+	//.hover-button:active {
+	//	background-color: $white;
+	//	box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
+	//	border: 1px solid $white;
+	//}
 }

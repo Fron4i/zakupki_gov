@@ -498,6 +498,12 @@ a:hover {
   .price__button-wrapper > *:nth-child(2):hover {
     color: #fff;
   }
+  .ocean-hover:hover {
+    color: #00c8fb !important;
+  }
+  .ocean-hover-2:hover {
+    color: #fff !important;
+  }
   .button--ocean-reversal {
     border: 2px solid #fff;
     background-color: #fff;
@@ -820,6 +826,7 @@ a:hover {
 }
 
 .problems {
+  z-index: 4;
   margin-top: 85px;
   width: 100%;
   display: flex;
@@ -873,7 +880,8 @@ a:hover {
 }
 
 .offer {
-  margin-top: 105px;
+  padding-top: 170px;
+  margin-top: -65px;
   width: 100%;
   display: flex;
   align-items: center;
@@ -1021,7 +1029,7 @@ a:hover {
 .banner__info-wrapper > * {
   color: #fff;
 }
-.banner__info-wrapper > .header__button {
+.banner__info-wrapper > * > .header__button {
   max-width: 277px;
   justify-content: center;
   filter: drop-shadow(1px 1px 40px rgba(255, 255, 255, 0.5));
@@ -1035,7 +1043,8 @@ a:hover {
 }
 
 .price {
-  margin-top: 105px;
+  padding-top: 170px;
+  margin-top: -65px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1101,6 +1110,14 @@ a:hover {
   top: -23px;
   right: -22px;
 }
+.signboards__sale {
+  transition: all 0.3s ease;
+  position: absolute;
+  top: 165px;
+  right: 30px;
+  opacity: 0;
+  pointer-events: none;
+}
 .signboards__subtitle {
   color: #919191;
 }
@@ -1118,11 +1135,15 @@ a:hover {
   align-items: center;
 }
 .signboards__price-sale {
+  transition: all 0.3s ease;
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 5px;
+}
+.signboards__price {
+  transition: all 0.3s ease;
 }
 .signboards__line {
   margin: 14px 0 28px;
@@ -1145,8 +1166,8 @@ a:hover {
   padding: 10px 12px;
   text-align: start;
   border-radius: 15px;
-  top: 170px;
-  left: 150px;
+  top: 175px;
+  left: 60px;
 }
 
 .banner-2 {
@@ -1166,7 +1187,7 @@ a:hover {
   display: flex;
   flex-direction: column;
 }
-.banner-2__wrapper > .header__button {
+.banner-2__wrapper > * > .header__button {
   max-width: 277px;
   justify-content: center;
   filter: drop-shadow(1px 1px 40px rgba(255, 255, 255, 0.5));
@@ -1891,13 +1912,8 @@ a:hover {
     color: #999999;
     border: 1px solid #999999;
   }
-  .small-text.w--current.hover-button:hover {
-    color: #001047;
-  }
-  .hover-button:hover {
-    background-color: #fff;
-    box-shadow: 1px 1px 43px rgba(0, 16, 71, 0.15);
-    border: 1px solid #fff;
+  .hover-button {
+    cursor: default;
   }
   .header__logo-wrapper:hover {
     scale: 0.95;
@@ -1937,13 +1953,5 @@ a:hover {
     box-shadow: none;
     color: #999999;
     border: 1px solid #999999;
-  }
-  .small-text.w--current.hover-button:active {
-    color: #001047;
-  }
-  .hover-button:active {
-    background-color: #fff;
-    box-shadow: 1px 1px 43px rgba(0, 16, 71, 0.15);
-    border: 1px solid #fff;
   }
 }/*# sourceMappingURL=main.css.map */

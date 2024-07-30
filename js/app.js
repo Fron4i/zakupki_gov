@@ -79,9 +79,308 @@ popupTriggers.forEach((trigger) => {
 	})
 })
 
-// ?ВОПРОСЫ
-
 document.addEventListener("DOMContentLoaded", function () {
+	//~ Запуск аоса по меткам
+	setTimeout(() => {
+		let elements = document.querySelectorAll(".startt-aos")
+		elements.forEach(function (element) {
+			element.classList.add("aos-animate")
+		})
+	}, 1000)
+
+	function checkVisibility() {
+		var benefitWrapper = document.querySelector(".svg-move__benefit-wrapper")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 200 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-2-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 250)
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-3-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 600)
+			window.removeEventListener("scroll", checkVisibility)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility)
+
+	function checkVisibility2() {
+		var benefitWrapper = document.querySelector(".problems__title")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 0 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-4-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 50)
+			window.removeEventListener("scroll", checkVisibility2)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility2)
+
+	function checkVisibility3() {
+		var benefitWrapper = document.querySelector(".problems__info-wrapper")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 100 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-5-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 200)
+			window.removeEventListener("scroll", checkVisibility3)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility3)
+
+	function checkVisibility4() {
+		var benefitWrapper = document.querySelector(".offer__main-title")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 100 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-6-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 200)
+			window.removeEventListener("scroll", checkVisibility4)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility4)
+
+	function checkVisibility5() {
+		var benefitWrapper = document.querySelector(".offer__points-wrapper")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 300 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-7-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility5)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility5)
+
+	function checkVisibility6() {
+		var benefitWrapper = document.querySelectorAll(".offer__points-wrapper")
+		var bounding = benefitWrapper[1].getBoundingClientRect()
+
+		if (bounding.top - 300 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-8-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility6)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility6)
+
+	function checkVisibility7() {
+		var benefitWrapper = document.querySelectorAll(".offer__points-wrapper")
+		var bounding = benefitWrapper[2].getBoundingClientRect()
+
+		if (bounding.top - 300 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-9-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility7)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility7)
+
+	function checkVisibility8() {
+		var benefitWrapper = document.querySelector(".banner")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 150 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-10-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 150)
+			window.removeEventListener("scroll", checkVisibility8)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility8)
+
+	function checkVisibility9() {
+		var benefitWrapper = document.querySelector(".startt-11-aos.h3.letter-spacing-1")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 300 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-11-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility9)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility9)
+
+	function checkVisibility10() {
+		var benefitWrapper = document.querySelector(".signboards__line")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 300 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-12-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility10)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility10)
+
+	function checkVisibility11() {
+		var benefitWrapper = document.querySelector(".banner-2")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 200 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-13-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility11)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility11)
+
+	function checkVisibility12() {
+		var benefitWrapper = document.querySelector(".questions__title")
+		var bounding = benefitWrapper.getBoundingClientRect()
+
+		if (bounding.top - 200 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-14-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility12)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility12)
+
+	function checkVisibility13() {
+		var benefitWrapper = document.querySelectorAll(".accordions")
+		var bounding = benefitWrapper[1].getBoundingClientRect()
+
+		if (bounding.top - 200 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-15-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility13)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility13)
+
+	function checkVisibility14() {
+		var benefitWrapper = document.querySelectorAll(".accordions")
+		var bounding = benefitWrapper[2].getBoundingClientRect()
+
+		if (bounding.top - 200 <= window.innerHeight) {
+			setTimeout(() => {
+				let elements = document.querySelectorAll(".startt-16-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}, 20)
+			window.removeEventListener("scroll", checkVisibility14)
+		}
+	}
+
+	window.addEventListener("scroll", checkVisibility14)
+
+	//! Плавные ссылки -----------------------------------------------------------------------------------------------------------------------------------
+	document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+		anchor.addEventListener("click", function (e) {
+			e.preventDefault()
+
+			document.querySelector(this.getAttribute("href")).scrollIntoView({
+				behavior: "smooth",
+			})
+		})
+	})
+
+	//! Класс для нужной секции в шапке
+	const sections = document.querySelectorAll('[id^="anchor-"]')
+	const links = document.querySelectorAll(".nav-item.small-text")
+
+	function updateCurrentLink() {
+		let currentSection = null
+
+		sections.forEach((section) => {
+			const rect = section.getBoundingClientRect()
+			if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+				//console.log(`Current section: ${section.id}`)
+				currentSection = section
+			}
+		})
+
+		if (currentSection) {
+			links.forEach((link) => {
+				const href = link.getAttribute("href")
+				//console.log(`Link href: ${href}`)
+				if (href) {
+					const targetId = href.startsWith("#") ? href.substring(1) : ""
+					//console.log(`Target ID from href: ${targetId}`)
+					if (targetId === currentSection.id) {
+						//console.log(`Adding class to: ${link.href}`)
+						link.classList.add("w--current")
+					} else {
+						//console.log(`Removing class from: ${link.href}`)
+						link.classList.remove("w--current")
+					}
+				}
+			})
+		}
+	}
+
+	window.addEventListener("scroll", updateCurrentLink)
+	updateCurrentLink()
+
+	// ?ВОПРОСЫ
 	const accordions = document.querySelectorAll(".accordions")
 
 	accordions.forEach((accordion, index) => {
@@ -111,6 +410,115 @@ document.addEventListener("DOMContentLoaded", function () {
 			})
 		}
 	})
+})
+
+// TODO Смена Месяц/Год
+let btnYear = document.getElementById("btn-year")
+let btnMonth = document.getElementById("btn-month")
+
+let isYearly = false
+let pricesSale = document.querySelectorAll(".signboards__price-sale")
+let prices = document.querySelectorAll(".signboards__price")
+let sales = document.querySelectorAll(".signboards__sale")
+
+btnYear.addEventListener("click", function () {
+	event.preventDefault() // Отменяем действие перехода по ссылке
+
+	if (!isYearly) {
+		btnYear.classList = []
+		btnYear.classList.add("button", "button--ocean", "text", "ocean-hover")
+		btnYear.style.color = "#fff"
+
+		btnMonth.classList = []
+		btnMonth.classList.add("button", "button--ocean-reversal", "text")
+
+		//prices[0].style.opacity = 0
+		//setTimeout(() => {
+		//	prices[0].textContent = "0₽"
+		//	prices[0].style.opacity = 1
+		//}, 300)
+
+		prices[1].style.opacity = 0
+		setTimeout(() => {
+			prices[1].textContent = "36 000 ₽/год"
+			prices[1].style.opacity = 1
+		}, 300)
+
+		prices[2].style.opacity = 0
+		setTimeout(() => {
+			prices[2].textContent = "47 000 ₽/год"
+			prices[2].style.opacity = 1
+
+			sales.forEach((sale) => {
+				sale.style.opacity = 1
+				sale.style.pointerEvents = "all"
+			})
+		}, 300)
+
+		pricesSale[0].style.opacity = 0
+		setTimeout(() => {
+			pricesSale[0].childNodes[2].textContent = "45 000 ₽/год"
+			pricesSale[0].style.opacity = 1
+		}, 300)
+
+		pricesSale[1].style.opacity = 0
+		setTimeout(() => {
+			pricesSale[1].childNodes[2].textContent = "67 200 ₽/год"
+			pricesSale[1].style.opacity = 1
+		}, 300)
+
+		isYearly = true
+	}
+})
+
+btnMonth.addEventListener("click", function () {
+	event.preventDefault() // Отменяем действие перехода по ссылке
+
+	sales.forEach((sale) => {
+		sale.style.opacity = 0
+		sale.style.pointerEvents = "none"
+	})
+
+	if (isYearly) {
+		btnYear.classList = []
+		btnYear.classList.add("button", "button--ocean-reversal", "text", "ocean-hover-2")
+		btnYear.style.color = "#00c8fb"
+
+		btnMonth.classList = []
+		btnMonth.classList.add("button", "button--ocean", "text")
+
+		//prices[0].style.opacity = 0
+		//setTimeout(() => {
+		//	prices[0].textContent = "0₽"
+		//	prices[0].style.opacity = 1
+		//}, 300)
+
+		prices[1].style.opacity = 0
+		setTimeout(() => {
+			prices[1].textContent = "3 750 ₽/мес."
+			prices[1].style.opacity = 1
+		}, 300)
+
+		prices[2].style.opacity = 0
+		setTimeout(() => {
+			prices[2].textContent = "4 900 ₽/мес."
+			prices[2].style.opacity = 1
+		}, 300)
+
+		pricesSale[0].style.opacity = 0
+		setTimeout(() => {
+			pricesSale[0].childNodes[2].textContent = "4 700 ₽/мес."
+			pricesSale[0].style.opacity = 1
+		}, 300)
+
+		pricesSale[1].style.opacity = 0
+		setTimeout(() => {
+			pricesSale[1].childNodes[2].textContent = "7 000 ₽/мес."
+			pricesSale[1].style.opacity = 1
+		}, 300)
+
+		isYearly = false
+	}
 })
 
 //! аккордион на мобиле
