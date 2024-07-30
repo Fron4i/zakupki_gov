@@ -297,6 +297,17 @@
 		box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
 		border: 1px solid $white;
 	}
+
+	.header__logo-wrapper:hover {
+		scale: 0.95;
+		opacity: 0.8;
+	}
+	.header__logo:hover,
+	.header__logo-main:hover {
+		scale: 0.8;
+		opacity: 0.8;
+		filter: blur(0.5px);
+	}
 }
 
 @media (hover: none) {

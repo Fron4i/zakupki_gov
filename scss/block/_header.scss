@@ -33,12 +33,17 @@
 .header__logo {
 	width: 120px;
 	height: 100%;
+
+	transition: all 0.3s ease;
+
 	&-main {
+		transition: all 0.3s ease;
 		width: 96px;
 		height: 36px;
 		display: flex;
 	}
 	&-wrapper {
+		transition: all 0.3s ease;
 		display: flex;
 		gap: 20px;
 		justify-content: center;

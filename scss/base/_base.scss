@@ -8,6 +8,11 @@ body {
 	color: $midnight-blue;
 	font-family: $font-main;
 	background-color: $white;
+
+	background-image: url("./../img/main_Img/grid-bg.svg");
+	background-position: 0 0;
+	background-repeat: repeat-y;
+	background-size: 100%;
 }
 
 .container {

@@ -81,24 +81,35 @@ popupTriggers.forEach((trigger) => {
 
 // ?ВОПРОСЫ
 
-const accordions = document.querySelectorAll(".accordion")
+document.addEventListener("DOMContentLoaded", function () {
+	const accordions = document.querySelectorAll(".accordions")
 
-accordions.forEach((accordion, index) => {
-	const header = accordion.querySelector(".accordion__header")
-	const content = accordion.querySelector(".accordion__content")
-	const icon = accordion.querySelector("#accordion-icon")
+	accordions.forEach((accordion, index) => {
+		const header = accordion.querySelector(".accordions__header")
+		const content = accordion.querySelector(".accordions__content")
 
-	header.addEventListener("click", () => {
-		const isOpen = content.style.height === `${content.scrollHeight}px`
+		if (header) {
+			header.addEventListener("click", () => {
+				const isOpen = content.style.height === `${content.scrollHeight}px`
 
-		accordions.forEach((a, i) => {
-			const c = a.querySelector(".accordion__content")
-			const ic = a.querySelector("#accordion-icon")
+				accordions.forEach((a, i) => {
+					const c = a.querySelector(".accordions__content")
+					const ic = a.querySelector(".accordions__icon")
 
-			c.style.height = i === index && !isOpen ? `${c.scrollHeight}px` : "0px"
-			ic.classList.toggle("ri-add-line", i !== index || !isOpen)
-			ic.classList.toggle("ri-subtract-fill", i === index && !isOpen)
-		})
+					if (c) {
+						c.style.height = i === index && !isOpen ? `${c.scrollHeight}px` : "0px"
+					}
+
+					if (ic) {
+						if (i === index && !isOpen) {
+							ic.style.transform = "rotate(45deg) scale(1.3)"
+						} else {
+							ic.style.transform = "rotate(0deg) scale(1.0)"
+						}
+					}
+				})
+			})
+		}
 	})
 })
 
