@@ -103,6 +103,8 @@
 		position: absolute;
 	}
 	&__right-lid {
+		width: 178px;
+		height: 295px;
 		top: -29.8%;
 		right: -6.7%;
 		position: absolute;
@@ -354,9 +356,9 @@
 		z-index: -2;
 		width: 100%;
 		padding-top: 710px;
-		padding-bottom: 370px;
+		padding-bottom: 920px;
 		margin-top: -710px;
-		margin-bottom: -370px;
+		margin-bottom: -920px;
 		background: $white;
 	}
 	margin-top: 185px;

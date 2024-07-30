@@ -506,7 +506,7 @@ a:hover {
   }
   .button--ocean-reversal:hover {
     background-color: #00c8fb;
-    border-color: #00c8fb;
+    border-color: #fff;
     color: #fff;
   }
   .button--ocean-reversal:hover .button__link {
@@ -767,6 +767,8 @@ a:hover {
   position: absolute;
 }
 .svg-move__right-lid {
+  width: 178px;
+  height: 295px;
   top: -29.8%;
   right: -6.7%;
   position: absolute;
@@ -1008,9 +1010,9 @@ a:hover {
   z-index: -2;
   width: 100%;
   padding-top: 710px;
-  padding-bottom: 370px;
+  padding-bottom: 920px;
   margin-top: -710px;
-  margin-bottom: -370px;
+  margin-bottom: -920px;
   background: #fff;
 }
 .banner__info-wrapper {
