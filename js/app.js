@@ -1,19 +1,33 @@
 // zoom
+const baseWidth = 1920 // Базовая ширина для расчета
+const baseHeight = 1080 // Базовая высота для расчета
+const currentWidth = window.innerWidth
+const currentHeight = window.innerHeight
+
+const zoomWidth = currentWidth / baseWidth
+const zoomHeight = currentHeight / baseHeight
+
+// Выбираем минимальное значение для сохранения пропорций
+let zoom = Math.min(zoomWidth, zoomHeight)
+let zoomIndex = zoom
+let zoom2 = 1
+
+let flag = true
 
 function setZoom() {
 	if (isMobileOrTablet) {
-		const baseWidth = 1920 // Базовая ширина для расчета
-		const baseHeight = 1080 // Базовая высота для расчета
-		const currentWidth = window.innerWidth
-		const currentHeight = window.innerHeight
-
-		const zoomWidth = currentWidth / baseWidth
-		const zoomHeight = currentHeight / baseHeight
-
-		// Выбираем минимальное значение для сохранения пропорций
-		let zoom = Math.min(zoomWidth, zoomHeight)
-
-		if (zoom < 0.7) {
+		if (isMobileOrTabletVertic() && flag) {
+			zoom += (40 / 100) * zoom
+			zoom2 += (25 / 100) * zoom2
+			flag = false
+			console.log("2")
+		} else if (zoomIndex < 0.55) {
+			if (!isMobileOrTabletVertic()) {
+				zoom += (60 / 100) * zoom
+				zoom2 += (38 / 100) * zoom2
+				console.log("1")
+			}
+		} else if (zoom < 0.7) {
 			zoom += (20 / 100) * zoom
 		} else if (zoom > 1.17) {
 			zoom -= (15 / 100) * zoom
@@ -22,12 +36,18 @@ function setZoom() {
 		}
 
 		document.body.style.zoom = zoom
+		$(".header").css("zoom", `${zoom2}`)
 	}
 }
 
 function isMobileOrTablet() {
-	// Проверяем, поддерживает ли устройство ховер эффект
 	const hoverQuery = "(hover: none)"
+	const hoverMediaQuery = window.matchMedia(hoverQuery)
+	return hoverMediaQuery.matches
+}
+
+function isMobileOrTabletVertic() {
+	const hoverQuery = "(orientation: landscape) and (hover: none)"
 	const hoverMediaQuery = window.matchMedia(hoverQuery)
 	return hoverMediaQuery.matches
 }
@@ -86,13 +106,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		elements.forEach(function (element) {
 			element.classList.add("aos-animate")
 		})
+
+		if (zoomIndex < 0.5) {
+			let elements2 = document.querySelectorAll(".startt-2-aos")
+			let elements3 = document.querySelectorAll(".startt-3-aos")
+			elements.forEach(function (element) {
+				element.classList.add("aos-animate")
+			})
+			elements2.forEach(function (element) {
+				element.classList.add("aos-animate")
+			})
+			elements3.forEach(function (element) {
+				element.classList.add("aos-animate")
+			})
+		}
 	}, 1000)
 
 	function checkVisibility() {
 		var benefitWrapper = document.querySelector(".svg-move__benefit-wrapper")
 		var bounding = benefitWrapper.getBoundingClientRect()
+		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - 200 <= window.innerHeight) {
+		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-2-aos")
 				elements.forEach(function (element) {
@@ -115,7 +150,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".problems__title")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 0 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 100 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-4-aos")
 				elements.forEach(function (element) {
@@ -132,7 +169,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".problems__info-wrapper")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 100 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 100 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-5-aos")
 				elements.forEach(function (element) {
@@ -149,7 +188,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".offer__main-title")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 100 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 100 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-6-aos")
 				elements.forEach(function (element) {
@@ -166,7 +207,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".offer__points-wrapper")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 300 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-7-aos")
 				elements.forEach(function (element) {
@@ -183,7 +226,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelectorAll(".offer__points-wrapper")
 		var bounding = benefitWrapper[1].getBoundingClientRect()
 
-		if (bounding.top - 300 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-8-aos")
 				elements.forEach(function (element) {
@@ -200,7 +245,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelectorAll(".offer__points-wrapper")
 		var bounding = benefitWrapper[2].getBoundingClientRect()
 
-		if (bounding.top - 300 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-9-aos")
 				elements.forEach(function (element) {
@@ -217,7 +264,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".banner")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 150 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 150 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-10-aos")
 				elements.forEach(function (element) {
@@ -234,7 +283,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".startt-11-aos.h3.letter-spacing-1")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 300 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-11-aos")
 				elements.forEach(function (element) {
@@ -251,7 +302,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".signboards__line")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 300 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-12-aos")
 				elements.forEach(function (element) {
@@ -268,7 +321,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".banner-2")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 200 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-13-aos")
 				elements.forEach(function (element) {
@@ -285,7 +340,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelector(".questions__title")
 		var bounding = benefitWrapper.getBoundingClientRect()
 
-		if (bounding.top - 200 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-14-aos")
 				elements.forEach(function (element) {
@@ -302,7 +359,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelectorAll(".accordions")
 		var bounding = benefitWrapper[1].getBoundingClientRect()
 
-		if (bounding.top - 200 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-15-aos")
 				elements.forEach(function (element) {
@@ -319,7 +378,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		var benefitWrapper = document.querySelectorAll(".accordions")
 		var bounding = benefitWrapper[2].getBoundingClientRect()
 
-		if (bounding.top - 200 <= window.innerHeight) {
+		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-16-aos")
 				elements.forEach(function (element) {

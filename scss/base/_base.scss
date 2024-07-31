@@ -40,14 +40,6 @@ body {
 	display: none !important;
 }
 
-a {
-	color: $midnight-blue;
-	transition: color 0.2s ease-in;
-
-	&:hover {
-		color: $primary;
-	}
-}
 .small-text {
 	font-size: 14px;
 	font-weight: 400;

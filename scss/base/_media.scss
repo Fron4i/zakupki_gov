@@ -47,7 +47,7 @@
 
 //^ Горизонт Планшы
 
-@media screen and (orientation: landscape) and (hover: none) {
+@media screen and (orientation: landscape) and (hover: none) and (max-height: 480px) {
 	body,
 	html {
 		overflow: hidden;
@@ -312,6 +312,73 @@
 		opacity: 0.8;
 		filter: blur(0.5px);
 	}
+
+	.button--ocean {
+		border: 2px solid $ocean;
+		background-color: $ocean;
+		color: $white;
+		letter-spacing: 0.6px;
+
+		&:hover {
+			background-color: $white;
+			border-color: $ocean;
+			color: $ocean;
+
+			.button__link {
+				color: $ocean;
+
+				&:hover {
+					color: $ocean;
+				}
+			}
+		}
+
+		.button__link {
+			color: $white;
+		}
+	}
+	.price__button-wrapper > *:nth-child(2):hover {
+		color: $white;
+	}
+	.ocean-hover:hover {
+		color: $ocean !important;
+	}
+	.ocean-hover-2:hover {
+		color: $white !important;
+	}
+	.button--ocean-reversal {
+		border: 2px solid $white;
+		background-color: $white;
+		color: $ocean;
+		letter-spacing: 0.6px;
+
+		&:hover {
+			background-color: $ocean;
+			border-color: $white;
+			color: $white;
+
+			.button__link {
+				color: $dark-ocean;
+
+				&:hover {
+					color: $dark-ocean;
+				}
+			}
+		}
+
+		.button__link {
+			color: $white;
+		}
+	}
+
+	a {
+		color: $midnight-blue;
+		transition: color 0.2s ease-in;
+
+		&:hover {
+			color: $primary;
+		}
+	}
 }
 
 @media (hover: none) {
@@ -356,4 +423,69 @@
 	//	box-shadow: (1px 1px 43px rgba(0, 16, 71, 0.15));
 	//	border: 1px solid $white;
 	//}
+	.button--ocean {
+		border: 2px solid $ocean;
+		background-color: $ocean;
+		color: $white;
+		letter-spacing: 0.6px;
+
+		&:active {
+			background-color: $white;
+			border-color: $ocean;
+			color: $ocean;
+
+			.button__link {
+				color: $ocean;
+
+				&:active {
+					color: $ocean;
+				}
+			}
+		}
+
+		.button__link {
+			color: $white;
+		}
+	}
+	.price__button-wrapper > *:nth-child(2):active {
+		color: $white;
+	}
+	.ocean-hover:active {
+		color: $ocean !important;
+	}
+	.ocean-hover-2:active {
+		color: $white !important;
+	}
+	.button--ocean-reversal {
+		border: 2px solid $white;
+		background-color: $white;
+		color: $ocean;
+		letter-spacing: 0.6px;
+
+		&:active {
+			background-color: $ocean;
+			border-color: $white;
+			color: $white;
+
+			.button__link {
+				color: $dark-ocean;
+
+				&:active {
+					color: $dark-ocean;
+				}
+			}
+		}
+
+		.button__link {
+			color: $white;
+		}
+	}
+	a {
+		color: $midnight-blue;
+		transition: color 0.2s ease-in;
+
+		&:active {
+			color: $primary;
+		}
+	}
 }

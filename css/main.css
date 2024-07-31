@@ -259,14 +259,6 @@ body {
   display: none !important;
 }
 
-a {
-  color: #001047;
-  transition: color 0.2s ease-in;
-}
-a:hover {
-  color: #1946da;
-}
-
 .small-text {
   font-size: 14px;
   font-weight: 400;
@@ -473,55 +465,6 @@ a:hover {
     color: #001047;
   }
   .button--blue .button__link {
-    color: #fff;
-  }
-  .button--ocean {
-    border: 2px solid #00c8fb;
-    background-color: #00c8fb;
-    color: #fff;
-    letter-spacing: 0.6px;
-  }
-  .button--ocean:hover {
-    background-color: #fff;
-    border-color: #00c8fb;
-    color: #00c8fb;
-  }
-  .button--ocean:hover .button__link {
-    color: #00c8fb;
-  }
-  .button--ocean:hover .button__link:hover {
-    color: #00c8fb;
-  }
-  .button--ocean .button__link {
-    color: #fff;
-  }
-  .price__button-wrapper > *:nth-child(2):hover {
-    color: #fff;
-  }
-  .ocean-hover:hover {
-    color: #00c8fb !important;
-  }
-  .ocean-hover-2:hover {
-    color: #fff !important;
-  }
-  .button--ocean-reversal {
-    border: 2px solid #fff;
-    background-color: #fff;
-    color: #00c8fb;
-    letter-spacing: 0.6px;
-  }
-  .button--ocean-reversal:hover {
-    background-color: #00c8fb;
-    border-color: #fff;
-    color: #fff;
-  }
-  .button--ocean-reversal:hover .button__link {
-    color: #0066a2;
-  }
-  .button--ocean-reversal:hover .button__link:hover {
-    color: #0066a2;
-  }
-  .button--ocean-reversal .button__link {
     color: #fff;
   }
 }
@@ -1699,7 +1642,7 @@ a:hover {
   width: 50px;
 }
 
-@media screen and (orientation: landscape) and (hover: none) {
+@media screen and (orientation: landscape) and (hover: none) and (max-height: 480px) {
   body,
   html {
     overflow: hidden;
@@ -1925,6 +1868,62 @@ a:hover {
     opacity: 0.8;
     filter: blur(0.5px);
   }
+  .button--ocean {
+    border: 2px solid #00c8fb;
+    background-color: #00c8fb;
+    color: #fff;
+    letter-spacing: 0.6px;
+  }
+  .button--ocean:hover {
+    background-color: #fff;
+    border-color: #00c8fb;
+    color: #00c8fb;
+  }
+  .button--ocean:hover .button__link {
+    color: #00c8fb;
+  }
+  .button--ocean:hover .button__link:hover {
+    color: #00c8fb;
+  }
+  .button--ocean .button__link {
+    color: #fff;
+  }
+  .price__button-wrapper > *:nth-child(2):hover {
+    color: #fff;
+  }
+  .ocean-hover:hover {
+    color: #00c8fb !important;
+  }
+  .ocean-hover-2:hover {
+    color: #fff !important;
+  }
+  .button--ocean-reversal {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #00c8fb;
+    letter-spacing: 0.6px;
+  }
+  .button--ocean-reversal:hover {
+    background-color: #00c8fb;
+    border-color: #fff;
+    color: #fff;
+  }
+  .button--ocean-reversal:hover .button__link {
+    color: #0066a2;
+  }
+  .button--ocean-reversal:hover .button__link:hover {
+    color: #0066a2;
+  }
+  .button--ocean-reversal .button__link {
+    color: #fff;
+  }
+  a {
+    color: #001047;
+    transition: color 0.2s ease-in;
+  }
+  a:hover {
+    color: #1946da;
+  }
 }
 @media (hover: none) {
   * {
@@ -1953,5 +1952,61 @@ a:hover {
     box-shadow: none;
     color: #999999;
     border: 1px solid #999999;
+  }
+  .button--ocean {
+    border: 2px solid #00c8fb;
+    background-color: #00c8fb;
+    color: #fff;
+    letter-spacing: 0.6px;
+  }
+  .button--ocean:active {
+    background-color: #fff;
+    border-color: #00c8fb;
+    color: #00c8fb;
+  }
+  .button--ocean:active .button__link {
+    color: #00c8fb;
+  }
+  .button--ocean:active .button__link:active {
+    color: #00c8fb;
+  }
+  .button--ocean .button__link {
+    color: #fff;
+  }
+  .price__button-wrapper > *:nth-child(2):active {
+    color: #fff;
+  }
+  .ocean-hover:active {
+    color: #00c8fb !important;
+  }
+  .ocean-hover-2:active {
+    color: #fff !important;
+  }
+  .button--ocean-reversal {
+    border: 2px solid #fff;
+    background-color: #fff;
+    color: #00c8fb;
+    letter-spacing: 0.6px;
+  }
+  .button--ocean-reversal:active {
+    background-color: #00c8fb;
+    border-color: #fff;
+    color: #fff;
+  }
+  .button--ocean-reversal:active .button__link {
+    color: #0066a2;
+  }
+  .button--ocean-reversal:active .button__link:active {
+    color: #0066a2;
+  }
+  .button--ocean-reversal .button__link {
+    color: #fff;
+  }
+  a {
+    color: #001047;
+    transition: color 0.2s ease-in;
+  }
+  a:active {
+    color: #1946da;
   }
 }/*# sourceMappingURL=main.css.map */
