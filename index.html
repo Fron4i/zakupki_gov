@@ -6,6 +6,8 @@
 
 		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.0/dist/aos.css" />
 
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.css" />
+
 		<link
 			href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic"
 			rel="stylesheet"
@@ -186,14 +188,23 @@
 						</div>
 						<div class="startt-aos" data-aos-delay="200" data-aos="fade-up">
 							<img height="44" src="./img/welcome_Img/grade.png" alt="grade" class="grade" />
+							<img height="44" src="./img/welcome_Img/grade-mob.png" alt="grade" class="grade-mob" />
 						</div>
 					</div>
 
 					<div class="svg-move">
 						<div data-aos="zoom-in" class="startt-2-aos">
 							<img src="./img/welcome_Img/svgMove-main-bg.png" alt="main-bg-svgMove" class="svg-move__main-bg main-bg-shadow" />
+							<img src="./img/welcome_Img/telephone.png" alt="main-bg-svgMove" class="svg-move__main-bg main-bg-shadow" />
 						</div>
 						<div class="svg-move__relative-platform">
+							<img
+								data-aos-delay="0"
+								data-aos="fade-right"
+								src="./img/welcome_Img/svgMove-left-left-lid.svg"
+								alt="left-lid-svgMove"
+								class="startt-2-aos svg-move__left-left-lid svg-move__component-shadow"
+							/>
 							<img
 								data-aos-delay="0"
 								data-aos="fade-right"
@@ -222,6 +233,8 @@
 								alt="bottom-lid-svgMove"
 								class="startt-2-aos svg-move__bottom-2-lid svg-move__component-shadow"
 							/>
+
+							<div class="grad-white"></div>
 						</div>
 						<div class="svg-move__benefit-wrapper">
 							<div class="svg-move__benefit-interior-wrapper">
@@ -250,6 +263,8 @@
 
 				<div class="problems container container--1330">
 					<h2 data-aos-delay="200" data-aos="fade-up" class="startt-4-aos h2-l problems__title">Узнаёте ваши проблемы?</h2>
+					<img class="problems__gif-swip" src="./img/core_Img/swipe.gif" />
+
 					<div class="problems__wrapper">
 						<div class="problems__item-wrapper">
 							<img
@@ -309,6 +324,100 @@
 								</div>
 							</div>
 						</div>
+						<div class="problems__item-wrapper">
+							<img
+								data-aos-delay="800"
+								data-aos="fade-left"
+								src="./img/core_Img/Rectangle 23-1.png"
+								alt="problems image 1"
+								class="startt-4-aos problems__image"
+							/>
+							<div class="problems__info-wrapper">
+								<div data-aos-delay="600" data-aos="fade-up" class="startt-5-aos h3 problems__item-title">
+									<span class="red">Дорогое и неэффективное</span> ПО для импорта извещений
+								</div>
+								<div data-aos-delay="800" data-aos="fade-up" class="startt-5-aos problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Решения наших конкурентов значительно дороже</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Несмотря на использование ПО для интеграции, вы все равно вручную отслеживаете изменения на zakupki.gov.ru и рискуете
+											упустить, например, изменение даты подачи.
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="carousel" data-flickity='{ "wrapAround": true, "groupCells": true }'>
+					<div class="carousel-cell">
+						<div class="problems__item-wrapper">
+							<img
+								data-aos-delay="400"
+								data-aos="fade-right"
+								src="./img/core_Img/Rectangle 23-2.png"
+								alt="problems image 1"
+								class="startt-4-aos problems__image"
+							/>
+							<div class="problems__info-wrapper">
+								<div data-aos-delay="200" data-aos="fade-up" class="startt-5-aos h3 problems__item-title">
+									<span class="red">Отсутствие CRM</span> системы в компании
+								</div>
+								<div data-aos-delay="400" data-aos="fade-up" class="startt-5-aos problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы работаете по стандартам 20го века</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Отдел продаж без CRM - это как бухгалтерия без 1С!</div>
+									</div>
+								</div>
+								<div data-aos-delay="600" data-aos="fade-up" class="startt-5-aos">
+									<a href="#" class="header__button small-text w--current">Подробнее</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
+						<div class="problems__item-wrapper">
+							<img
+								data-aos-delay="600"
+								data-aos="fade-up"
+								src="./img/core_Img/Rectangle 23.png"
+								alt="problems image 1"
+								class="startt-4-aos problems__image"
+							/>
+							<div class="problems__info-wrapper">
+								<div data-aos-delay="400" data-aos="fade-up" class="startt-5-aos h3 problems__item-title">
+									<span class="red">Ручное внесение</span> извещений из zakupki.gov.ru в CRM
+								</div>
+								<div data-aos-delay="600" data-aos="fade-up" class="startt-5-aos problems__points-wrapper">
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы используете труд интеллектуалов для выполнения примитивной работы</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">Вы рискуете получить неверно внесенные сведения по причине ошибки человека</div>
+									</div>
+									<div class="points__wrapper">
+										<img src="./img/main_Img/check.svg" alt="image check" class="points__image-check" />
+										<div class="text-m points__info">
+											Ваши менеджеры наверняка выбирают только удобные для себя извещения о торгах, умышленно игнорируя сложные или слабо влияющие
+											на KPI
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="carousel-cell">
 						<div class="problems__item-wrapper">
 							<img
 								data-aos-delay="800"
@@ -1028,6 +1137,8 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.8/lottie.min.js"></script>
 
 		<script src="https://unpkg.com/aos@2.3.0/dist/aos.js"></script>
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js"></script>
 
 		<script src="./js/app.js"></script>
 	</body>

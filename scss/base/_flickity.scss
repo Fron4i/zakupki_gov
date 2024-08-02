@@ -1,0 +1,126 @@
+.flickity-viewport {
+	overflow: visible;
+}
+
+.flickity-page-dots {
+	bottom: -3%;
+}
+
+.carousel-cell {
+	width: calc(100% - 30px);
+	margin: 0 2.5% 5%;
+}
+
+.carousel {
+	width: 100%;
+	margin: 0 auto 76px;
+}
+
+.flickity-button {
+	display: none;
+}
+
+.database__card-text-wrapper {
+	max-height: 220px;
+	padding: 20px;
+	border-radius: 20px;
+	background: #fafafa;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.database__card-image {
+	max-width: 370px;
+}
+.database__card-image > img {
+	border-radius: 20px;
+}
+
+.database__card-title {
+	font-size: 22px;
+	line-height: 29px;
+	color: rgb(0, 16, 71);
+}
+
+.database__card-text {
+	margin-top: 7px;
+	font-size: 14px;
+	line-height: 18px;
+	color: rgb(103, 108, 128);
+}
+
+.database__card-link {
+	width: -moz-max-content;
+	width: max-content;
+	margin-top: 7px;
+	cursor: pointer;
+}
+
+.database__card-link-image {
+	width: 14px;
+	height: 14px;
+	margin-left: 5px;
+	margin-top: 5px;
+}
+
+.carousel {
+	display: none;
+}
+
+.page-footer__social-link:focus-visible svg {
+	color: #000;
+	transform: scale(1.12);
+}
+@media screen and (height >= 850px) and (height < 950px) {
+	.database__card-title {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.database__card-text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+}
+@media screen and (height >= 800px) and (height < 850px) {
+	.database__card-title {
+		font-size: 20px;
+		line-height: 26px;
+	}
+	.database__card-text {
+		font-size: 15px;
+		line-height: 20px;
+	}
+}
+@media screen and (width >= 1440px) and (width < 1920px) {
+	.database__card-title {
+		font-size: 18px;
+		line-height: 26px;
+	}
+	.database__card-text {
+		font-size: 12px;
+		line-height: 20px;
+	}
+	.database__card-text-wrapper {
+		height: 180px;
+	}
+	.database__card-link {
+		font-size: 12px;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	.database__card-text-wrapper {
+		margin-top: 10px;
+	}
+	.carousel {
+		display: block;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+	.database__card-text {
+		font-size: clamp(14px, 1.6vw, 20px);
+		line-height: clamp(18px, 2.2vw, 24px);
+	}
+}

@@ -1,4 +1,17 @@
-// zoom
+//~ flickity
+
+var elem = document.querySelector(".carousel")
+var flkty = new Flickity(elem, {
+	// Настройки
+	cellAlign: "center",
+	contain: true,
+	groupCells: 1,
+	wrapAround: true,
+	prevNextButtons: false, // Убираем кнопки навигации по бокам
+	pageDots: true,
+})
+
+// TODO Zoom
 const baseWidth = 1920 // Базовая ширина для расчета
 const baseHeight = 1080 // Базовая высота для расчета
 let currentWidth = window.innerWidth
@@ -25,30 +38,51 @@ function setZoom() {
 	zoom = Math.min(zoomWidth, zoomHeight)
 
 	if (isMobileOrTablet()) {
-		if (isMobileOrTabletVertic() && flag) {
+		if (isMobile480() && flag) {
+			const referenceWidth = 428 // Ширина, для которой верстка идеальна при зуме 1.0
+			const referenceZoom = 1.0 // Зум для эталонной ширины
+			const minWidth = 320 // Минимальная ширина экрана
+			const minZoom = 0.75 // Зум для минимальной ширины экрана
+
+			const screenWidth = window.innerWidth
+
+			// Рассчитываем необходимый масштаб
+			if (screenWidth >= referenceWidth) {
+				zoom = referenceZoom
+			} else if (screenWidth <= minWidth) {
+				zoom = minZoom
+			} else {
+				// Линейная интерполяция между эталонной и минимальной ширинами
+				zoom = ((screenWidth - minWidth) / (referenceWidth - minWidth)) * (referenceZoom - minZoom) + minZoom
+			}
+
+			flag = false
+			console.log("mob", zoom)
+		} else if (isMobileOrTabletVertic() && flag) {
 			zoom += (40 / 100) * zoom
 			zoom2 += (30 / 100) * zoom2
 			flag = false
-			console.log("1")
+			console.log("1", zoom)
 		} else if (zoom < 0.55 && flag) {
 			if (isMobileOrTabletPortable()) {
 				zoom += (60 / 100) * zoom
 				zoom2 += (42 / 100) * zoom2
 				flag = false
-				console.log("2")
+				console.log("2", zoom)
 			} else if (isMobileOrTabletVertic()) {
+				console.log("2.2", zoom)
 			}
 		}
 	} else {
 		if (zoom < 0.7) {
 			zoom += (20 / 100) * zoom
-			console.log("3")
+			console.log("3", zoom)
 		} else if (zoom > 1.17) {
 			zoom -= (15 / 100) * zoom
-			console.log("4")
+			console.log("4", zoom)
 		} else {
 			zoom -= (5 / 100) * zoom
-			console.log("5")
+			console.log("5", zoom)
 		}
 	}
 
@@ -70,6 +104,12 @@ function isMobileOrTabletVertic() {
 
 function isMobileOrTabletPortable() {
 	const hoverQuery = "(orientation: portrait)"
+	const hoverMediaQuery = window.matchMedia(hoverQuery)
+	return hoverMediaQuery.matches
+}
+
+function isMobile480() {
+	const hoverQuery = "(max-width: 480px)"
 	const hoverMediaQuery = window.matchMedia(hoverQuery)
 	return hoverMediaQuery.matches
 }
