@@ -1,43 +1,59 @@
 // zoom
 const baseWidth = 1920 // Базовая ширина для расчета
 const baseHeight = 1080 // Базовая высота для расчета
-const currentWidth = window.innerWidth
-const currentHeight = window.innerHeight
+let currentWidth = window.innerWidth
+let currentHeight = window.innerHeight
 
-const zoomWidth = currentWidth / baseWidth
-const zoomHeight = currentHeight / baseHeight
+let zoomWidth = currentWidth / baseWidth
+let zoomHeight = currentHeight / baseHeight
 
 // Выбираем минимальное значение для сохранения пропорций
 let zoom = Math.min(zoomWidth, zoomHeight)
 let zoomIndex = zoom
-let zoom2 = 1
 
+let zoom2 = 1
 let flag = true
 
 function setZoom() {
-	if (isMobileOrTablet) {
+	currentWidth = window.innerWidth
+	currentHeight = window.innerHeight
+
+	zoomWidth = currentWidth / baseWidth
+	zoomHeight = currentHeight / baseHeight
+
+	// Выбираем минимальное значение для сохранения пропорций
+	zoom = Math.min(zoomWidth, zoomHeight)
+
+	if (isMobileOrTablet()) {
 		if (isMobileOrTabletVertic() && flag) {
 			zoom += (40 / 100) * zoom
-			zoom2 += (25 / 100) * zoom2
+			zoom2 += (30 / 100) * zoom2
 			flag = false
-			console.log("2")
-		} else if (zoomIndex < 0.55) {
-			if (!isMobileOrTabletVertic()) {
+			console.log("1")
+		} else if (zoom < 0.55 && flag) {
+			if (isMobileOrTabletPortable()) {
 				zoom += (60 / 100) * zoom
-				zoom2 += (38 / 100) * zoom2
-				console.log("1")
+				zoom2 += (42 / 100) * zoom2
+				flag = false
+				console.log("2")
+			} else if (isMobileOrTabletVertic()) {
 			}
-		} else if (zoom < 0.7) {
+		}
+	} else {
+		if (zoom < 0.7) {
 			zoom += (20 / 100) * zoom
+			console.log("3")
 		} else if (zoom > 1.17) {
 			zoom -= (15 / 100) * zoom
+			console.log("4")
 		} else {
 			zoom -= (5 / 100) * zoom
+			console.log("5")
 		}
-
-		document.body.style.zoom = zoom
-		$(".header").css("zoom", `${zoom2}`)
 	}
+
+	document.body.style.zoom = zoom
+	$(".header").css("zoom", `${zoom2}`)
 }
 
 function isMobileOrTablet() {
@@ -47,7 +63,13 @@ function isMobileOrTablet() {
 }
 
 function isMobileOrTabletVertic() {
-	const hoverQuery = "(orientation: landscape) and (hover: none)"
+	const hoverQuery = "(orientation: landscape)"
+	const hoverMediaQuery = window.matchMedia(hoverQuery)
+	return hoverMediaQuery.matches
+}
+
+function isMobileOrTabletPortable() {
+	const hoverQuery = "(orientation: portrait)"
 	const hoverMediaQuery = window.matchMedia(hoverQuery)
 	return hoverMediaQuery.matches
 }
