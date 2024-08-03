@@ -38,7 +38,7 @@ function setZoom() {
 	zoom = Math.min(zoomWidth, zoomHeight)
 
 	if (isMobileOrTablet()) {
-		if (isMobile480() && flag) {
+		if (isMobile480()) {
 			const referenceWidth = 428 // Ширина, для которой верстка идеальна при зуме 1.0
 			const referenceZoom = 1.0 // Зум для эталонной ширины
 			const minWidth = 320 // Минимальная ширина экрана
@@ -46,17 +46,8 @@ function setZoom() {
 
 			const screenWidth = window.innerWidth
 
-			// Рассчитываем необходимый масштаб
-			if (screenWidth >= referenceWidth) {
-				zoom = referenceZoom
-			} else if (screenWidth <= minWidth) {
-				zoom = minZoom
-			} else {
-				// Линейная интерполяция между эталонной и минимальной ширинами
-				zoom = ((screenWidth - minWidth) / (referenceWidth - minWidth)) * (referenceZoom - minZoom) + minZoom
-			}
+			zoom = ((screenWidth - minWidth) / (referenceWidth - minWidth)) * (referenceZoom - minZoom) + minZoom
 
-			flag = false
 			console.log("mob", zoom)
 		} else if (isMobileOrTabletVertic() && flag) {
 			zoom += (40 / 100) * zoom
@@ -75,7 +66,7 @@ function setZoom() {
 		}
 	} else {
 		if (zoom < 0.7) {
-			zoom += (20 / 100) * zoom
+			zoom += (30 / 100) * zoom
 			console.log("3", zoom)
 		} else if (zoom > 1.17) {
 			zoom -= (15 / 100) * zoom
@@ -114,11 +105,8 @@ function isMobile480() {
 	return hoverMediaQuery.matches
 }
 
-// Устанавливаем начальный zoom
-setZoom()
-
-// Обновляем zoom при изменении размера окна
-window.addEventListener("resize", setZoom)
+window.addEventListener("load", setZoom())
+window.addEventListener("resize", setZoom())
 
 // ~hover popup
 
@@ -163,6 +151,17 @@ popupTriggers.forEach((trigger) => {
 
 document.addEventListener("DOMContentLoaded", function () {
 	//~ Запуск аоса по меткам
+
+	if (isMobile480() && isMobileOrTablet()) {
+		const startAosElements = document.querySelectorAll(".startt-aos")
+
+		let delay = 700
+		startAosElements.forEach((element) => {
+			element.setAttribute("data-aos-delay", delay.toString())
+			delay += 200
+		})
+	}
+
 	setTimeout(() => {
 		let elements = document.querySelectorAll(".startt-aos")
 		elements.forEach(function (element) {
@@ -170,17 +169,31 @@ document.addEventListener("DOMContentLoaded", function () {
 		})
 
 		if (zoomIndex < 0.5) {
-			let elements2 = document.querySelectorAll(".startt-2-aos")
-			let elements3 = document.querySelectorAll(".startt-3-aos")
-			elements.forEach(function (element) {
-				element.classList.add("aos-animate")
-			})
-			elements2.forEach(function (element) {
-				element.classList.add("aos-animate")
-			})
-			elements3.forEach(function (element) {
-				element.classList.add("aos-animate")
-			})
+			if (isMobile480() && isMobileOrTablet()) {
+				let elements2 = document.querySelectorAll(".startt-2-aos")
+				let elements3 = document.querySelectorAll(".startt-3-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+				elements2.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+				elements3.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			} else {
+				let elements2 = document.querySelectorAll(".startt-2-aos")
+				let elements3 = document.querySelectorAll(".startt-3-aos")
+				elements.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+				elements2.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+				elements3.forEach(function (element) {
+					element.classList.add("aos-animate")
+				})
+			}
 		}
 	}, 1000)
 
