@@ -478,6 +478,11 @@
 		display: flex;
 	}
 
+	.gif-swip {
+		width: 62px;
+		height: 62px;
+	}
+
 	.problems {
 		margin-top: 140px;
 		position: relative;
@@ -491,7 +496,7 @@
 
 		&__gif-swip {
 			top: 80px;
-			right: 15px;
+			right: 30px;
 			width: 62px;
 			height: 62px;
 			position: absolute;

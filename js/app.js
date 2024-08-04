@@ -155,12 +155,118 @@ document.addEventListener("DOMContentLoaded", function () {
 	if (isMobile480() && isMobileOrTablet()) {
 		const startAosElements = document.querySelectorAll(".startt-aos")
 
-		let delay = 700
+		let delay = 500
 		startAosElements.forEach((element) => {
 			element.setAttribute("data-aos-delay", delay.toString())
 			delay += 200
 		})
+
+		let elements2 = document.querySelectorAll(".startt-2-aos")
+		let elementsH3 = document.querySelector(".h3.welcome__limiter-text")
+		const firstElement = elements2[0]
+
+		elements2[0].setAttribute("data-aos-delay", 200)
+
+		function checkAOSAnimation() {
+			if (firstElement.classList.contains("aos-animate")) {
+				elements2[0].classList.remove("aos-animate")
+				return
+			} else {
+				setTimeout(checkAOSAnimation, 10)
+			}
+		}
+
+		checkAOSAnimation()
+
+		elementsH3.setAttribute("data-aos-delay", 300)
+
+		let leftLeft = document.querySelector(".svg-move__left-left-lid")
+		leftLeft.setAttribute("data-aos", "fade-left")
+		leftLeft.setAttribute("data-aos-delay", 400)
+
+		let leftZoom = document.querySelector(".svg-move__left-lid")
+		leftZoom.setAttribute("data-aos", "zoom-in")
+		leftZoom.setAttribute("data-aos-delay", 200)
+
+		let rightRight = document.querySelector(".svg-move__right-lid")
+		rightRight.setAttribute("data-aos", "fade-right")
+		rightRight.setAttribute("data-aos-delay", 400)
+
+		let startt3 = document.querySelectorAll(".startt-3-aos")
+		startt3[0].setAttribute("data-aos-delay", 200)
+		startt3[1].setAttribute("data-aos-delay", 400)
+		startt3[2].setAttribute("data-aos-delay", 600)
+
+		let startt4 = document.querySelectorAll(".startt-4-aos")
+		startt4[0].setAttribute("data-aos", "zoom-in")
+		startt4[0].setAttribute("data-aos-delay", 200)
+
+		let problems__image = document.querySelector(".problems__image-mob")
+		problems__image.setAttribute("data-aos-delay", 200)
+
+		let gifSwip = document.querySelector(".problems__gif-swip")
+		gifSwip.setAttribute("data-aos", "fade-left")
+		gifSwip.setAttribute("data-aos-delay", 250)
+
+		let flickityDots = document.querySelector(".flickity-page-dots")
+		flickityDots.classList.add("startt-5-aos")
+		flickityDots.setAttribute("data-aos", "zoom-in")
+		flickityDots.setAttribute("data-aos-delay", 400)
+
+		let startt6 = document.querySelector(".startt-6-aos")
+		startt6.setAttribute("data-aos", "zoom-in")
+		startt6.setAttribute("data-aos-delay", 200)
+
+		let startt7 = document.querySelectorAll(".startt-7-aos")
+		startt7[0].setAttribute("data-aos-delay", 200)
+		startt7[1].setAttribute("data-aos-delay", 350)
+
+		let startt5 = document.querySelectorAll(".startt-5-aos")
+		let numElements = startt5.length
+
+		if (numElements >= 3) {
+			startt5[numElements - 1].setAttribute("data-aos", "fade-up")
+			startt5[numElements - 1].setAttribute("data-aos-delay", 400)
+			startt5[numElements - 2].setAttribute("data-aos", "fade-up")
+			startt5[numElements - 2].setAttribute("data-aos-delay", 300)
+			startt5[numElements - 3].setAttribute("data-aos", "fade-up")
+			startt5[numElements - 3].setAttribute("data-aos-delay", 200)
+		}
+
+		let startt8 = document.querySelectorAll(".startt-8-aos")
+
+		startt8[1].setAttribute("data-aos-delay", 750)
+		startt8[2].setAttribute("data-aos-delay", 750)
+		startt8[3].setAttribute("data-aos-delay", 550)
+		//startt8[3].setAttribute("data-aos", "zoom-out")
+
+		let startt9 = document.querySelectorAll(".startt-9-aos")
+
+		startt9[1].setAttribute("data-aos-delay", 500)
+		startt9[2].setAttribute("data-aos-delay", 800)
+		startt9[1].setAttribute("data-aos", "fade-left")
+		startt9[2].setAttribute("data-aos", "fade-left")
+
+		let startt10 = document.querySelectorAll(".startt-10-aos")
+
+		startt10[4].setAttribute("data-aos-delay", 1100)
+
+		let startt12 = document.querySelectorAll(".startt-12-aos")
+
+		startt12[1].setAttribute("data-aos", "fade-right")
+		startt12[2].setAttribute("data-aos", "fade-left")
+		startt12[1].setAttribute("data-aos-delay", 200)
+		startt12[2].setAttribute("data-aos-delay", 200)
+
+		let startt13 = document.querySelectorAll(".startt-13-aos")
+
+		startt13[4].setAttribute("data-aos", "zoom-out-up")
 	}
+
+	//setInterval(() => {
+	//	const elements = document.querySelectorAll(".startt-5-aos")
+	//	console.log(elements)
+	//}, 100)
 
 	setTimeout(() => {
 		let elements = document.querySelectorAll(".startt-aos")
@@ -170,23 +276,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		if (zoomIndex < 0.5) {
 			if (isMobile480() && isMobileOrTablet()) {
-				let elements2 = document.querySelectorAll(".startt-2-aos")
-				let elements3 = document.querySelectorAll(".startt-3-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-				elements2.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-				elements3.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
 			} else {
 				let elements2 = document.querySelectorAll(".startt-2-aos")
 				let elements3 = document.querySelectorAll(".startt-3-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
+
 				elements2.forEach(function (element) {
 					element.classList.add("aos-animate")
 				})
@@ -202,20 +295,44 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper.getBoundingClientRect()
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 200 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-2-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 250)
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-3-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 600)
-			window.removeEventListener("scroll", checkVisibility)
+		if (isMobile480() && isMobileOrTablet()) {
+			benefitWrapper = document.querySelector(".svg-move__left-lid")
+			factor = 3
+
+			if (bounding.top - factor * 200 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-2-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 250)
+			}
+
+			if (bounding.top - factor * -40 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-3-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 0)
+				window.removeEventListener("scroll", checkVisibility)
+			}
+		} else {
+			if (bounding.top - factor * 200 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-2-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 250)
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-3-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 600)
+				window.removeEventListener("scroll", checkVisibility)
+			}
 		}
 	}
 
@@ -226,6 +343,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper.getBoundingClientRect()
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = -0.8
+		}
 
 		if (bounding.top - factor * 100 <= window.innerHeight) {
 			setTimeout(() => {
@@ -246,14 +367,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 100 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-5-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 200)
-			window.removeEventListener("scroll", checkVisibility3)
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0.8
+			let startt5 = document.querySelectorAll(".startt-5-aos")
+			let numElements = startt5.length
+
+			if (numElements >= 3) {
+				benefitWrapper = startt5[numElements - 3]
+			}
+
+			bounding = benefitWrapper.getBoundingClientRect()
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-5-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 200)
+				window.removeEventListener("scroll", checkVisibility3)
+			}
+		} else {
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-5-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 200)
+				window.removeEventListener("scroll", checkVisibility3)
+			}
 		}
 	}
 
@@ -264,6 +406,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper.getBoundingClientRect()
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0
+		}
 
 		if (bounding.top - factor * 100 <= window.innerHeight) {
 			setTimeout(() => {
@@ -284,14 +430,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 300 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-7-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 20)
-			window.removeEventListener("scroll", checkVisibility5)
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 2
+			if (bounding.top - factor * 350 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-7-aos")
+					let firstThree = Array.from(elements).slice(0, 2)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+			}
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-7-aos")
+					let firstThree = Array.from(elements).slice(2, 5)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
+		} else {
+			if (bounding.top - factor * 300 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-7-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
 		}
 	}
 
@@ -303,14 +472,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 300 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-8-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 20)
-			window.removeEventListener("scroll", checkVisibility6)
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 2
+			if (bounding.top - factor * 250 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-8-aos")
+					let firstThree = Array.from(elements).slice(0, 4)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+			}
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-8-aos")
+					let firstThree = Array.from(elements).slice(4, 7)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
+		} else {
+			if (bounding.top - factor * 300 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-8-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
 		}
 	}
 
@@ -322,14 +514,37 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 300 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-9-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 20)
-			window.removeEventListener("scroll", checkVisibility7)
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 2
+			if (bounding.top - factor * 250 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-9-aos")
+					let firstThree = Array.from(elements).slice(0, 3)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+			}
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-9-aos")
+					let firstThree = Array.from(elements).slice(3, 6)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
+		} else {
+			if (bounding.top - factor * 300 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-9-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
 		}
 	}
 
@@ -340,6 +555,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper.getBoundingClientRect()
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0
+		}
 
 		if (bounding.top - factor * 150 <= window.innerHeight) {
 			setTimeout(() => {
@@ -360,6 +579,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0.65
+		}
+
 		if (bounding.top - factor * 300 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-11-aos")
@@ -379,14 +602,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
-		if (bounding.top - factor * 300 <= window.innerHeight) {
-			setTimeout(() => {
-				let elements = document.querySelectorAll(".startt-12-aos")
-				elements.forEach(function (element) {
-					element.classList.add("aos-animate")
-				})
-			}, 20)
-			window.removeEventListener("scroll", checkVisibility10)
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = -1
+			if (bounding.top - factor * 100 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-12-aos")
+					let firstThree = Array.from(elements).slice(0, 1)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+			}
+			if (bounding.top - factor * 650 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-12-aos")
+					let firstThree = Array.from(elements).slice(1, 2)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+			}
+			if (bounding.top - factor * 1200 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-12-aos")
+					let firstThree = Array.from(elements).slice(2, 3)
+					firstThree.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
+		} else {
+			if (bounding.top - factor * 300 <= window.innerHeight) {
+				setTimeout(() => {
+					let elements = document.querySelectorAll(".startt-12-aos")
+					elements.forEach(function (element) {
+						element.classList.add("aos-animate")
+					})
+				}, 20)
+				window.removeEventListener("scroll", checkVisibility5)
+			}
 		}
 	}
 
@@ -397,6 +652,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper.getBoundingClientRect()
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0
+		}
 
 		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
@@ -417,6 +676,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 0.5
+		}
+
 		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-14-aos")
@@ -436,6 +699,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
 
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 1
+		}
+
 		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
 				let elements = document.querySelectorAll(".startt-15-aos")
@@ -454,6 +721,10 @@ document.addEventListener("DOMContentLoaded", function () {
 		var bounding = benefitWrapper[2].getBoundingClientRect()
 
 		let factor = zoomIndex < 0.55 ? 3 : 1
+
+		if (isMobile480() && isMobileOrTablet()) {
+			factor = 1
+		}
 
 		if (bounding.top - factor * 200 <= window.innerHeight) {
 			setTimeout(() => {
